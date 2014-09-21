@@ -4,7 +4,6 @@ set :deploy_user, 'root'
 # setup repo details
 set :scm, :git
 set :repo_url, 'git@github.com:Nibyru/comotti.git'
-set :linked_files, %w{config/database.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 namespace :deploy do
