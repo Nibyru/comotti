@@ -4,16 +4,16 @@ set :branch, "master"
 # This is used in the Nginx VirtualHost to specify which domains
 # the app should appear on. If you don't yet have DNS setup, you'll
 # need to create entries in your local Hosts file for testing.
-set :server_name, "178.62.249.52"
+set :server_name, "104.131.45.61"
 
 # used in case we're deploying multiple versions of the same
 # app side by side. Also provides quick sanity checks when looking
 # at filepaths
 set :full_app_name, "#{fetch(:application)}_#{fetch(:stage)}"
 
-server '178.62.249.52', user: 'root', roles: %w{web app db}, primary: true
+server '104.131.45.61', user: 'root', roles: %w{web app db}, primary: true
 
-set :deploy_to, "/home/rails/"
+set :deploy_to, "/home/rails"
 
 # dont try and infer something as important as environment from
 # stage name.
