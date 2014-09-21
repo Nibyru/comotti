@@ -1,23 +1,29 @@
 <% unless is_a?(Devise::SessionsController) %>
-  <nav class="navbar navbar-default">
+<!--   <nav class="navbar navbar-default">-->
+  <nav>
     <div class="container-fluid">
-      <ul class='nav navbar'>
-        <li class=<%= 'active' if current_page?(action: :index)%> >
-          <%= link_to 'inicio', root_path %>
-        </li>
-        <li class=<%= 'active' if current_page?(action: :products)%> >
-          <%= link_to 'productos', products_path %>
-        </li>
-        <li class=<%= 'active' if current_page?(action: :promos)%> >
-          <%= link_to 'promociones', promos_path %>
-        </li>
-        <li class=<%= 'active' if current_page?(action: :contact)%> >
-          <%= link_to 'contacto', contact_path %>
-        </li>
-        <li>
-          <%= link_to 'administrador', rails_admin_path %>
-        </li>
-      </ul>
+      <div class="row">
+        <div class="col-lg-3">
+          <%= image_tag ('logo.png') %>
+        </div>
+        <div class="col-lg-9">
+          <!-- <ul class="nav navbar">-->
+          <ul>         
+            <li class=<%= 'active' if current_page?(action: :index)%> >
+              <%= link_to 'inicio', root_path %>
+            </li>
+            <li class=<%= 'active' if current_page?(action: :products)%> >
+              <%= link_to 'productos', products_path %>
+            </li>
+            <li class=<%= 'active' if current_page?(action: :promos)%> >
+              <%= link_to 'promociones', promos_path %>
+            </li>
+            <li class=<%= 'active' if current_page?(action: :contact)%> >
+              <%= link_to 'contacto', contact_path %>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </nav>
 <% end %>
