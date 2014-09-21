@@ -3,7 +3,7 @@ set :deploy_user, 'root'
 
 # setup repo details
 set :scm, :git
-set :repo_url, 'git@github.com:sarriagada/comotti.git'
+set :repo_url, 'git@github.com:Nibyru/comotti.git'
 
 # setup rbenv.
 #set :rbenv_type, :system
