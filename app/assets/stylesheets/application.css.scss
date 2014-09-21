@@ -1,9 +1,33 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+$font1: 'Lato', sans-serif;
+$font2: 'Amatic SC', cursive;
+
+body{
+	max-width: 1300px;
+}
+
 nav{
+	height: 90px;
+	line-height: 90px;
+	background: -webkit-linear-gradient(top, #950e09 0%, #b3120b 100%);
 	ul{
-		li{ display: inline-block; }
+		text-align: right;
+		li{
+			display: inline-block;
+			margin-left: 30px;
+			a{			
+				font-family: $font2;
+				color: #F7F7F7;
+				font-size: 3.5rem;
+				font-weight: bold;
+			}
+		}
 	}
 }
 
+
+.footer1{background:#212121;}
+.footer2{background:#1E1E1E;}
+.footer3{background:#1C1C1C;}
