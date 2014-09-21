@@ -54,7 +54,7 @@ set(:symlinks, [
   },
   {
     source: "unicorn_init.sh",
-    link: "/etc/init.d/unicorn"
+    link: "/etc/init.d/unicorn_{{full_app_name}}"
   },
   {
     source: "log_rotation",
