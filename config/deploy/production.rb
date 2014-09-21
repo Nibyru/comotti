@@ -9,8 +9,6 @@ set :server_name, "104.131.45.61"
 # used in case we're deploying multiple versions of the same
 # app side by side. Also provides quick sanity checks when looking
 # at filepaths
-set :full_app_name, "#{fetch(:application)}_#{fetch(:stage)}"
-
 server '104.131.45.61', user: 'root', roles: %w{web app db}, primary: true
 
 set :deploy_to, "/home/rails"
