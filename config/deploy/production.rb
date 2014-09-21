@@ -12,6 +12,8 @@ set :server_name, "104.131.45.61"
 server '104.131.45.61', user: 'root', roles: %w{web app db}, primary: true
 
 set :deploy_to, "/home/rails"
+set :assets_roles, [:web, :app]            # Defaults to [:web]
+set :assets_prefix, 'prepackaged-assets'
 
 # dont try and infer something as important as environment from
 # stage name.

@@ -5,6 +5,7 @@ set :deploy_user, 'root'
 set :scm, :git
 set :repo_url, 'git@github.com:Nibyru/comotti.git'
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+set :normalize_asset_timestamps, %{public/images public/javascripts public/stylesheets}
 
 namespace :deploy do
 
