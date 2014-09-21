@@ -15,6 +15,8 @@ server '178.62.249.52', user: 'root', roles: %w{web app db}, primary: true
 
 set :deploy_to, "/home/rails/"
 
+set :default_env, { path: "/usr/local/rvm/gems/ruby-2.0.0-p247@global/bin:$PATH" }
+
 # dont try and infer something as important as environment from
 # stage name.
 set :rails_env, :production
