@@ -4,30 +4,317 @@
 $font1: 'Lato', sans-serif;
 $font2: 'Amatic SC', cursive;
 
-body{
-	max-width: 1300px;
+*{
+	text-decoration:none !important;
+}
+.row{
+	margin:0;
 }
 
+body{
+	max-width: 1300px;
+	margin:auto;
+}
+
+a{cursor:pointer;}
+
+/* - - - HEADER - - - */
+.navbar-default{margin:0;}
 nav{
 	height: 90px;
 	line-height: 90px;
-	background: -webkit-linear-gradient(top, #950e09 0%, #b3120b 100%);
+	background:#FBEFDF;
+	background-image: url('bg_header.png');
+	background-repeat: repeat-x;
+	background-size: auto 100%;
+	z-index:100;
 	ul{
 		text-align: right;
 		li{
 			display: inline-block;
-			margin-left: 30px;
+			margin: 0 15px;
 			a{			
 				font-family: $font2;
 				color: #F7F7F7;
-				font-size: 3.5rem;
+				font-size: 3rem;
 				font-weight: bold;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+/* - - - FIN DE HEADER - - - */
+
+
+#slider{
+	width:100%;
+	min-height:430px;
+	background: url('textura_slider.jpg');
+	text-align:center;
+	padding-top:45px;
+	margin-bottom:180px;
+	span,h1{
+		display:inline-block;
+		vertical-align: middle;
+	}
+	span{img{height:75px;}}
+	h1{
+		font-family: $font2;
+		color: #4C4741;
+		font-size: 6.5rem;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin:0 10px;
+	}
+	h4{
+		margin-top: 15px;
+		font-family: $font1;
+		color: #666666;
+		font-size: 2rem;
+		font-weight: lighter;
+		text-transform: uppercase;
+		b{font-weight:500;}
+	}
+
+	.carousel{
+		height: 200px;
+		.carousel-control.left,.carousel-control.right{
+			background:transparent;
+			opacity: 1;
+			height: 90px;
+		}
+		.carousel-indicators{bottom: -180px;}
+		.carousel-indicators li{
+			background: #DADADA;
+			border:none;
+			width: 12px;
+			height: 12px;
+			margin: 3px;
+		}
+		.carousel-indicators .active{background: #B01B15;}
+		.carousel-inner{
+			height: 300px;
+			img{
+				height:300px;
+				width:auto;
+				margin:auto;
+			}
+		}
+	}
+}
+
+#pastas-pizzas-postres{
+	text-align:center;
+	h2{
+		font-family: $font2;
+		font-weight: lighter;
+		text-transform: uppercase;
+		font-size: 4.5rem;
+		color: #C70E34;
+	}
+	.img-pastas,.img-pizzas,.img-postres{
+		margin: auto;
+		width: 205px;
+		height: 205px;
+		border-radius: 204px;
+	}
+	.img-pastas{
+		background: url("01.jpg");
+		background-size: 300%;
+		background-position: 380px 280px;
+	}
+	.img-pizzas{
+		background: url("02.jpg");
+		background-size: 140%;
+		background-position: 240px 205px;
+	}
+	.img-postres{
+		background: url("03.jpg");
+		background-size: 150%;
+		background-position: center;
+	}
+	.ver-mas{
+		margin: auto;
+		position: relative;
+		top: -35px;
+		width: 205px;
+		height: 37px;
+		background: url("ver_todo.png");
+		background-size: 100%;
+		background-position: top;
+		p{
+			font-family: $font1;
+			text-transform: uppercase;
+			color: #fff;
+			line-height: 40px;
+			font-size: 1.3rem;
+		}
+	}
+}
+
+.background-gris{
+	margin-top: -200px;
+	z-index: -1;
+	background:#F7F7F7;
+	width:100%;
+	height:230px;
+}
+
+#mapa{
+	.opciones-mapa{
+		width:100%;
+		height:154px;
+		background:url('base_mapa.png');
+		padding-top:40px;
+		.ubicar-mapa{
+			margin:auto;
+			width: 300px;
+			height: 73px;
+			background:url('ubicar_mapa.png');
+			background-position:top;
+			&:hover{
+				background-position:bottom;
+			}
+			p{
+				font-family: $font2;
+				text-transform: uppercase;
+				font-size: 3.8rem;
+				line-height: 65px;
+				text-align: center;
+				text-indent: 30px;
+				color: #AC100B;
 			}
 		}
 	}
 }
 
 
-.footer1{background:#212121;}
-.footer2{background:#1E1E1E;}
-.footer3{background:#1C1C1C;}
+
+/* - - - CONTACTO - - - */
+#contacto{
+	padding-bottom:70px;
+	.titulo{
+		background: url('textura_slider.jpg');
+		text-align: center;
+		height: 100px;
+		h1{
+			font-family: $font2;
+			color: #4C4741;
+			font-size: 4.5rem;
+			font-weight: bold;
+			text-transform: uppercase;
+			margin:0;
+			line-height: 100px;
+		}
+	}
+	.formulario{
+		margin-top: 45px;
+		label{
+			font-family: $font1;
+			color: #B11A15;
+			font-weight: 300;
+			font-size: 1.6rem;
+			margin:0;
+		}
+		input{
+			width: 100%;
+			height: 60px;
+			border: none;
+			background:url('input.jpg');
+			margin-bottom: 20px;
+		}
+		textarea{
+			background:url('textarea.jpg');
+			width: 100%;
+			max-width: 100%;
+			height: 208px;
+			max-height: 208px;
+			border: none;
+			padding-top: 20px;
+		}
+		.form-control{
+			box-shadow: none;
+		}
+		button{
+			background: #D31F18;
+			color: #F7F7F7;
+			font-family: $font1;
+			width: 70px;
+			font-size: 1.7rem;
+			padding: 3px 0px;
+			margin-top: 20px;
+		}
+	}
+}
+
+/* - - - FIN DE CONTACTO - - - */
+
+
+/* - - - FOOTER - - - */
+.footer1{
+	background:#212121;
+	height:100px;
+	line-height:100px;
+	.social{
+		img{height:30px;}
+	}
+}
+.footer2{
+	background:#1E1E1E;
+	padding: 15px 0 50px 0;
+	.horarios{padding-left:0;}
+	h3{
+		font-family:$font2;
+		color: #C70E34;
+		font-size: 3.8rem;
+		font-weight: 600;
+	}
+	p{
+		font-family: $font1;
+		color: #6E6E6E;
+		font-size: 1.5rem;
+		margin:0;
+	}
+	h4{
+		font-family: $font1;
+		color: #D1D1D1;
+		font-size: 2.2rem;
+		margin: 0 0 7px 0;
+	}
+	.divisor{
+		background:url('divisor_foot.png') no-repeat;
+		height: 243px;
+	}
+	.direcciones{
+		h3{
+			font-size: 2.5rem;
+			text-transform: uppercase;
+		}
+		h4{
+			font-size: 1.5rem;
+			text-transform: uppercase;
+			margin:0;
+			i{text-transform:none; font-style:normal;}
+		}
+		hr {
+			margin:13px 0;
+			border-top: 1px solid #292929;
+			width: 120px;
+		}
+	}
+	.delivery-data{
+		margin-top: 20px;
+		padding-top: 20px;
+		border-top: 1px solid #292929;
+		color: #505050;
+		b{color: #C70E34;}
+	}
+}
+
+.footer3{
+	background:#1C1C1C;
+	font-size:1.1rem;
+	color:#353535;
+	a{color:#353535;}
+}
+/* - - - FIN DE FOOTER - - - */

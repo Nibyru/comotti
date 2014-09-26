@@ -1,2 +1,91 @@
-<h1>Home</h1>
+<body>
+	
+		<div id="slider">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+						<span><%= image_tag ('luces_abierto_izq.png') %></span>
+						<h1>Ahora comotti pastas está en internet</h1>
+						<span><%= image_tag ('luces_abierto_der.png') %></span>
+						<h4><b>Bienvenidos.</b> Pasá y conocé nuesta empresa y productos.</h4>
+					</div>
+				</div>
+			</div>
+			
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			  <!-- Indicators -->
+			  <ol class="carousel-indicators">
+			    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+			  </ol>
+
+			  <!-- Wrapper for slides -->
+			  <div class="carousel-inner">
+			    <div class="item active">
+			      <%= image_tag ("img-slide1.jpg") %>
+			      <div class="carousel-caption">
+			        ...
+			      </div>
+			    </div>
+			    <div class="item">
+			      <%= image_tag ('img-slide2.jpg') %>
+			      <div class="carousel-caption">
+			        ...
+			      </div>
+			    </div>
+			    <div class="item">
+			      <%= image_tag ('img-slide3.jpg') %>
+			      <div class="carousel-caption">
+			        ...
+			      </div>
+			    </div>
+			  </div>
+
+			  <!-- Controls -->
+			  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+			  	<%= image_tag ('flecha_slider_izq.png') %>
+			    <!-- <span class="glyphicon glyphicon-chevron-left"></span> -->
+			  </a>
+			  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+			  	<%= image_tag ('flecha_slider_der.png') %>
+			  </a>
+			</div>
+
+		</div>
+
+		<div id="pastas-pizzas-postres">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+						<div class="col-lg-4 col-md-4">
+							<h2>Pastas</h2>
+							<div class="img-pastas"></div>
+							<div class="ver-mas">
+								<a><p>Ver todas <b>las pastas</b></p></a>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4">
+							<h2>Pizzas y tartas</h2>
+							<div class="img-pizzas"></div>
+							<div class="ver-mas">
+								<a><p>Ver todas <b>las pizzas</b></p></a>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4">
+							<h2>Postres</h2>
+							<div class="img-postres"></div>
+							<div class="ver-mas">
+								<a><p>Ver todos <b>los postres</b></p></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="background-gris"></div>
+	
+</body>
+
 

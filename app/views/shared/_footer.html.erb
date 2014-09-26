@@ -2,18 +2,95 @@
 	<div class="footer1">
 		<div class="container-fuid">
 			<div class="row">
-				<div class="col-lg-5 col-lg-offset-1">
-					<%= image_tag ('logo-gris.png') %>
+				<div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1">
+					<%= image_tag ('logo_foot.png') %>
+				</div>
+				<div class="col-lg-3 col-md-3 social">
+					<%= image_tag ('f.png') %>
 				</div>
 			</div>
 		</div>
 	</div>
+
 	<div class="footer2">
+		<div class="container-fuid">
+			<div class="row">
+				<div class="col-lg-12 col-md-12">
+
+					<div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 horarios">
+
+						<div class="col-lg-12 col-md-12">
+							<h3>Horarios de atención</h3>
+						</div>
+						<div class="col-lg-6 col-md-6">
+							<p>Lunes a sábado:</p>
+							<h4>9:45 a 14:00 hs</h4>
+							<h4>17:30 a 22:00 hs</h4>
+						</div>
+						<div class="col-lg-6 col-md-6">
+							<p>Domingo:</p>
+							<h4>9:45 a 14:00 hs</h4>
+						</div>
+						<div class="col-lg-11 col-md-11" style="text-align:center; margin-top:20px;">
+							<span><%= image_tag ('luces_abierto_izq.png') %></span>
+							<%= image_tag ('boton_abierto.png') %>
+							<span><%= image_tag ('luces_abierto_der.png') %></span>
+						</div>
+
+					</div>
+
+
+					<div class="col-lg-1 col-md-1 divisor">
+					</div>
+
+
+					<div class="col-lg-5 col-md-5 direcciones">
+
+						<div class="col-lg-5 col-md-5">
+							<h3>S.M. de Tucumán</h3>
+							<h4>Santa Fe 909</h4>
+							<p>Tel. 4975.047</p>
+							<hr>
+							<h4>Santiago 684</h4>
+							<p>Tel. 4220.042</p>
+						</div>
+
+						<div class="col-lg-7 col-md-7">
+							<h3>Yerba Buena</h3>
+							<h4>Lobo de la Vega 1ª <i>cuadra</i></h4>
+							<p>Tel. 4258.693</p>
+							<hr>
+							<h4>Av. Aconquija 299</h4>
+							<p>Tel. 4359.658</p>
+						</div>
+
+						<div class="col-lg-11 col-md-11 delivery-data">
+							<div class="col-lg-8 col-md-8" style="padding-left:0;">
+								<h5><b>*</b> Delivery en todos nuestros locales</h5>
+							</div>
+							<div class="col-lg-4 col-md-4" style="text-align:right; padding-right:0;">
+								<%= image_tag ('data_fiscal.jpg') %>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
 	</div>
+
 	<div class="footer3">
-		<li>
-		  <%= link_to 'administrador', rails_admin_path %>
-		</li>
+		<div class="container-fuid">
+			<div class="row">
+				<div class="col-lg-9 col-lg-offset-1 col-md-9 col-md-offset-1">
+				  <%= link_to 'Administrador', rails_admin_path %>
+				</div>
+				<div class="col-lg-2 col-md-2">
+					<p>Desarrollo DOT estudio</p>
+				</div>
+			</div>
+		</div>
 	</div>
 
 </footer>

@@ -1,12 +1,12 @@
 <% unless is_a?(Devise::SessionsController) %>
-<!--   <nav class="navbar navbar-default">-->
-  <nav>
+<!-- <nav>  -->
+  <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-lg-3">
-          <%= image_tag ('logo.png') %>
+        <div class="col-lg-3 col-md-3">
+          <%= link_to image_tag("logo_head.png", class:"logo"), root_path %>
         </div>
-        <div class="col-lg-9">
+        <div class="col-lg-9 col-md-9">
           <!-- <ul class="nav navbar">-->
           <ul>         
             <li class=<%= 'active' if current_page?(action: :index)%> >
@@ -27,3 +27,7 @@
     </div>
   </nav>
 <% end %>
+
+<div class="borde">
+  <!-- <%= image_tag ('triang.png') %> -->
+</div>
