@@ -1,14 +1,63 @@
-<h1>Productos</h1>
-<ul>
-  <% @products.each do |product| %>
-    <li>
-      <strong><%= product.title %></strong>
-      <br>
-      <%= image_tag(product.photo.url, size: '100') if product.photo %>
-      <br>
-      <span>$<%= product.price %></span>
-      <br>
-      <p><%= product.description %></p>
-    </li>
-  <% end %>
-</ul>
+<div id="productos">
+
+  <div class="titulo">
+    <h1>Nuestros productos</h1>
+  </div>
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1 fitros-productos">
+        <div class="col-lg-3 col-md-3">
+          <a><div class="filtro">Todos</div></a>
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <a><div class="filtro">Pastas</div></a>
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <a><div class="filtro">Pizzas</div></a>
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <a><div class="filtro">Postres</div></a>
+        </div>
+      </div>
+
+      <ul class="col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1 lista-productos">
+        <% @products.each do |product| %>
+
+          <li class="col-lg-3 col-md-3">
+
+            <div class="img-producto">
+              <%= image_tag(product.photo.url, size: '100') if product.photo %>
+            </div>
+
+            <div class="col-lg-12 col-md-12 detalles">
+              <h3><%= product.title %></h3>
+              <p><%= product.description %></p>
+              <hr>
+              <div class="datos">
+                <span class="glyphicon glyphicon-time"></span>
+                <h4>12' de cocción</h4>
+              </div>
+              <div class="datos">
+                <span class="glyphicon glyphicon-cutlery"></span>
+                <h4>2 porciones</h4>
+              </div>
+            </div>
+
+            <div class="col-lg-12 col-md-12 precio">
+              <p>Precio</p>
+              <span><i>$</i><%= product.price %></span>
+            </div>
+
+          </li>
+
+        <% end %>
+      </ul>
+
+    </div>
+  </div>
+
+</div>
+
+

@@ -3,22 +3,17 @@
 
 $font1: 'Lato', sans-serif;
 $font2: 'Amatic SC', cursive;
+$font3: 'Roboto Slab', serif;
 
 *{
 	text-decoration:none !important;
+	list-style:none;
 }
 .row{
 	margin:0;
 }
 
-body{
-	max-width: 1300px;
-	margin:auto;
-}
-
 a{cursor:pointer;}
-
-
 
 /* - - - HEADER - - - */
 
@@ -40,8 +35,8 @@ nav{
 				font-family: $font2;
 				color: #F7F7F7;
 				font-size: 3rem;
-				font-weight: bold;
 				text-transform: uppercase;
+				&:hover{color:#460906;}
 			}
 		}
 	}
@@ -60,28 +55,32 @@ nav{
 	text-align:center;
 	padding-top:45px;
 	margin-bottom:180px;
-	span,h1{
-		display:inline-block;
-		vertical-align: middle;
+	.titulo-home {
+		height: 120px;
+		span,h1{
+			display:inline-block;
+			vertical-align: middle;
+		}
+		span{img{height:75px;}}
+		h1{
+			font-family: $font2;
+			color: #4C4741;
+			font-size: 6.5rem;
+			font-weight: bold;
+			text-transform: uppercase;
+			margin:0 10px;
+		}
+		h4{
+			margin-top: 15px;
+			font-family: $font1;
+			color: #666666;
+			font-size: 2rem;
+			font-weight: lighter;
+			text-transform: uppercase;
+			b{font-weight:500;}
+		}
 	}
-	span{img{height:75px;}}
-	h1{
-		font-family: $font2;
-		color: #4C4741;
-		font-size: 6.5rem;
-		font-weight: bold;
-		text-transform: uppercase;
-		margin:0 10px;
-	}
-	h4{
-		margin-top: 15px;
-		font-family: $font1;
-		color: #666666;
-		font-size: 2rem;
-		font-weight: lighter;
-		text-transform: uppercase;
-		b{font-weight:500;}
-	}
+	
 
 	.carousel{
 		height: 200px;
@@ -173,25 +172,26 @@ nav{
 /* - - - FIN DE HOME - - - */
 
 
+.titulo{
+	background: url('textura_slider.jpg');
+	text-align: center;
+	height: 100px;
+	h1{
+		font-family: $font2;
+		color: #4C4741;
+		font-size: 4.5rem;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin:0;
+		line-height: 100px;
+	}
+}
+
 
 
 /* - - - CONTACTO - - - */
 #contacto{
 	padding-bottom:70px;
-	.titulo{
-		background: url('textura_slider.jpg');
-		text-align: center;
-		height: 100px;
-		h1{
-			font-family: $font2;
-			color: #4C4741;
-			font-size: 4.5rem;
-			font-weight: bold;
-			text-transform: uppercase;
-			margin:0;
-			line-height: 100px;
-		}
-	}
 	.formulario{
 		margin-top: 45px;
 		label{
@@ -235,6 +235,108 @@ nav{
 /* - - - FIN DE CONTACTO - - - */
 
 
+
+
+/* - - - PRODUCTOS - - - */
+
+#productos{
+	margin-bottom:100px;
+	.fitros-productos{
+		padding:0 0 30px 0;
+		margin-top: 50px;
+		border-bottom:1px dotted #B9B9B9;
+		text-align:center;
+		.filtro{
+			height:34px;
+			background:url('btn_filtro.png') no-repeat;
+			background-position:top;
+			color: #AE110B;
+			font-family: $font1;
+			text-transform: uppercase;
+			font-weight: 300;
+			line-height: 34px;
+			&:hover{
+				background-position:bottom;
+				color: #FFF;
+				font-weight: 400;
+			}
+		}
+	}
+	.lista-productos{
+		padding:0;
+		li{
+			margin-top:30px;
+			.img-producto{
+				height: 130px;
+				width: 100%;
+				overflow: hidden;
+				img{
+					width: auto;
+					height: 100%;
+				}
+			}
+			.detalles{
+				background:#F9F9F9;
+				padding-bottom:10px;
+				h3{
+					font-family: $font3;
+					color: #A41712;
+					text-transform: uppercase;
+					font-weight: 400;
+					font-size: 1.4rem;
+					margin:0;
+					padding:20px 0;
+				}
+				p{
+					font-size: 1.1rem;
+					text-align: justify;
+					color: #666;
+					font-family: $font1;
+				}
+				hr{
+					border-top:1px solid #E0E0E0;
+					margin:15px 0;
+				}
+				.datos{
+					padding-bottom:5px;
+					span,h4{display:inline-block; }
+					span{
+						color:#4C4741;
+						font-size: 1.4rem;
+					}
+					h4{
+						font-size: 1.2rem;
+						margin:0;
+						text-transform:uppercase;
+						padding-left:3px;
+					}
+				}
+			}
+			.precio{
+				background:#F1F1F1;
+				text-align: right;
+				font-family: $font1;
+				padding-top:10px;
+				padding-bottom:10px;
+				p{
+					font-size: 1.1rem;
+					color: #666;
+					text-transform: uppercase;
+					margin: 0;
+				}
+				span{
+					font-size: 3.5rem;
+					color:#A41712;
+					font-weight: bold;
+					padding-bottom:10px;
+					i{color:#CCC; font-weight:100;}
+				}
+			}
+		}
+	}
+}
+
+/* - - - FIN DE PRODUCTOS - - - */
 
 
 /* - - - MAPA - - - */
@@ -284,36 +386,38 @@ nav{
 .footer2{
 	background:#1E1E1E;
 	padding: 15px 0 50px 0;
-	.horarios{padding-left:0;}
+	.horarios{padding-left:0;padding-right:0;}
 	h3{
 		font-family:$font2;
 		color: #C70E34;
-		font-size: 3.8rem;
+		font-size: 3.6rem;
 		font-weight: 600;
 	}
 	p{
 		font-family: $font1;
 		color: #6E6E6E;
-		font-size: 1.5rem;
+		font-size: 1.4rem;
 		margin:0;
 	}
 	h4{
 		font-family: $font1;
 		color: #D1D1D1;
-		font-size: 2.2rem;
+		font-size: 2rem;
 		margin: 0 0 7px 0;
 	}
 	.divisor{
 		background:url('divisor_foot.png') no-repeat;
 		height: 243px;
+		width: 30px;
 	}
 	.direcciones{
+		padding-right:0;
 		h3{
-			font-size: 2.5rem;
+			font-size: 2.3rem;
 			text-transform: uppercase;
 		}
 		h4{
-			font-size: 1.5rem;
+			font-size: 1.4rem;
 			text-transform: uppercase;
 			margin:0;
 			i{text-transform:none; font-style:normal;}
@@ -323,10 +427,12 @@ nav{
 			border-top: 1px solid #292929;
 			width: 120px;
 		}
+		.yb{padding-right:0;}
 	}
 	.delivery-data{
 		margin-top: 20px;
 		padding-top: 20px;
+		padding-left:0;
 		border-top: 1px solid #292929;
 		color: #505050;
 		b{color: #C70E34;}
