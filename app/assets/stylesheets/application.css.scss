@@ -15,6 +15,9 @@ $font3: 'Roboto Slab', serif;
 
 a{cursor:pointer;}
 
+.pad-left{
+	padding-left:0;
+}
 /* - - - HEADER - - - */
 
 .navbar-default{margin:0;}
@@ -94,8 +97,8 @@ nav{
 		.carousel-indicators li{
 			background: #DADADA;
 			border:none;
-			width: 12px;
-			height: 12px;
+			width: 13px;
+			height: 13px;
 			margin: 3px;
 		}
 		.carousel-indicators .active{background: #B01B15;}
@@ -117,14 +120,15 @@ nav{
 		font-family: $font2;
 		font-weight: lighter;
 		text-transform: uppercase;
-		font-size: 4.5rem;
-		color: #C70E34;
+		font-size: 5rem;
+		color: #990e09;
 	}
 	.img-pastas,.img-pizzas,.img-postres{
 		margin: auto;
-		width: 205px;
-		height: 205px;
-		border-radius: 204px;
+		width: 215px;
+		height: 215px;
+		border-radius: 215px;
+		border: 5px solid #f7f7f7;
 	}
 	.img-pastas{
 		background: url("01.jpg");
@@ -145,11 +149,10 @@ nav{
 		margin: auto;
 		position: relative;
 		top: -35px;
-		width: 205px;
-		height: 37px;
-		background: url("ver_todo.png");
-		background-size: 100%;
+		height: 38px;
+		background: url("ver_todo.png") no-repeat;
 		background-position: top;
+		&:hover{background-position:bottom;}
 		p{
 			font-family: $font1;
 			text-transform: uppercase;
@@ -172,6 +175,8 @@ nav{
 /* - - - FIN DE HOME - - - */
 
 
+
+
 .titulo{
 	background: url('textura_slider.jpg');
 	text-align: center;
@@ -179,13 +184,122 @@ nav{
 	h1{
 		font-family: $font2;
 		color: #4C4741;
-		font-size: 4.5rem;
+		font-size: 4.8rem;
 		font-weight: bold;
 		text-transform: uppercase;
 		margin:0;
 		line-height: 100px;
 	}
 }
+
+
+
+
+
+/* - - - PRODUCTOS - - - */
+
+#productos{
+	margin-bottom:100px;
+	.fitros-productos{
+		padding:0 0 30px 0;
+		margin-top: 50px;
+		border-bottom:1px dotted #B9B9B9;
+		text-align:center;
+		.filtro{
+			height:34px;
+			background:url('btn_filtro.png') no-repeat;
+			background-position:top;
+			color: #AE110B;
+			font-family: $font1;
+			font-size: 1.4rem;
+			text-transform: uppercase;
+			font-weight: 300;
+			line-height: 34px;
+			&:hover{
+				background-position:bottom;
+				color: #FFF;
+				font-weight: 400;
+			}
+		}
+	}
+	.lista-productos{
+		padding:0;
+		li{
+			margin-top:30px;
+			.img-producto{
+				height: 130px;
+				width: 100%;
+				overflow: hidden;
+				img{
+					width: auto;
+					height: 100%;
+				}
+			}
+			.detalles{
+				background:#F9F9F9;
+				padding-bottom:10px;
+				h3{
+					font-family: $font3;
+					color: #A41712;
+					text-transform: uppercase;
+					font-size: 1.6rem;
+					margin:0;
+					padding:20px 0;
+				}
+				p{
+					font-size: 1.2rem;
+					text-align: justify;
+					color: #666;
+					font-family: $font1;
+				}
+				hr{
+					border-top:1px solid #E0E0E0;
+					margin:15px 0;
+				}
+				.datos{
+					padding-bottom:5px;
+					span,h4{display:inline-block; }
+					span{
+						color:#4C4741;
+						font-size: 1.4rem;
+					}
+					h4{
+						font-size: 1.2rem;
+						margin:0;
+						text-transform:uppercase;
+						padding-left:3px;
+						font-family: $font1;
+					}
+				}
+			}
+			.precio{
+				background:#F1F1F1;
+				text-align: right;
+				font-family: $font1;
+				padding-top:10px;
+				padding-bottom:10px;
+				p{
+					font-size: 0.9rem;
+					color: #666;
+					text-transform: uppercase;
+					margin: 0;
+				}
+				span{
+					font-family: $font1;
+					font-size: 3rem;
+					color:#A41712;
+					font-weight: bold;
+					padding-bottom:10px;
+					i{color:#CCC; font-weight:100; font-style:normal;}
+				}
+			}
+		}
+	}
+}
+
+/* - - - FIN DE PRODUCTOS - - - */
+
+
 
 
 
@@ -221,11 +335,12 @@ nav{
 			box-shadow: none;
 		}
 		button{
-			background: #D31F18;
+			background: -webkit-linear-gradient(top, #b92721 0%, #970e09 100%);
 			color: #F7F7F7;
 			font-family: $font1;
+			font-weight: 400;
 			width: 70px;
-			font-size: 1.7rem;
+			font-size: 1.8rem;
 			padding: 3px 0px;
 			margin-top: 20px;
 		}
@@ -237,106 +352,7 @@ nav{
 
 
 
-/* - - - PRODUCTOS - - - */
 
-#productos{
-	margin-bottom:100px;
-	.fitros-productos{
-		padding:0 0 30px 0;
-		margin-top: 50px;
-		border-bottom:1px dotted #B9B9B9;
-		text-align:center;
-		.filtro{
-			height:34px;
-			background:url('btn_filtro.png') no-repeat;
-			background-position:top;
-			color: #AE110B;
-			font-family: $font1;
-			text-transform: uppercase;
-			font-weight: 300;
-			line-height: 34px;
-			&:hover{
-				background-position:bottom;
-				color: #FFF;
-				font-weight: 400;
-			}
-		}
-	}
-	.lista-productos{
-		padding:0;
-		li{
-			margin-top:30px;
-			.img-producto{
-				height: 130px;
-				width: 100%;
-				overflow: hidden;
-				img{
-					width: auto;
-					height: 100%;
-				}
-			}
-			.detalles{
-				background:#F9F9F9;
-				padding-bottom:10px;
-				h3{
-					font-family: $font3;
-					color: #A41712;
-					text-transform: uppercase;
-					font-weight: 400;
-					font-size: 1.4rem;
-					margin:0;
-					padding:20px 0;
-				}
-				p{
-					font-size: 1.1rem;
-					text-align: justify;
-					color: #666;
-					font-family: $font1;
-				}
-				hr{
-					border-top:1px solid #E0E0E0;
-					margin:15px 0;
-				}
-				.datos{
-					padding-bottom:5px;
-					span,h4{display:inline-block; }
-					span{
-						color:#4C4741;
-						font-size: 1.4rem;
-					}
-					h4{
-						font-size: 1.2rem;
-						margin:0;
-						text-transform:uppercase;
-						padding-left:3px;
-					}
-				}
-			}
-			.precio{
-				background:#F1F1F1;
-				text-align: right;
-				font-family: $font1;
-				padding-top:10px;
-				padding-bottom:10px;
-				p{
-					font-size: 1.1rem;
-					color: #666;
-					text-transform: uppercase;
-					margin: 0;
-				}
-				span{
-					font-size: 3.5rem;
-					color:#A41712;
-					font-weight: bold;
-					padding-bottom:10px;
-					i{color:#CCC; font-weight:100;}
-				}
-			}
-		}
-	}
-}
-
-/* - - - FIN DE PRODUCTOS - - - */
 
 
 /* - - - MAPA - - - */
@@ -359,7 +375,7 @@ nav{
 			p{
 				font-family: $font2;
 				text-transform: uppercase;
-				font-size: 3.8rem;
+				font-size: 3.9rem;
 				line-height: 65px;
 				text-align: center;
 				text-indent: 30px;
@@ -390,20 +406,22 @@ nav{
 	h3{
 		font-family:$font2;
 		color: #C70E34;
-		font-size: 3.6rem;
+		font-size: 3.7rem;
 		font-weight: 600;
 	}
 	p{
 		font-family: $font1;
 		color: #6E6E6E;
-		font-size: 1.4rem;
+		font-size: 1.6rem;
 		margin:0;
+		font-weight: lighter;
 	}
 	h4{
 		font-family: $font1;
 		color: #D1D1D1;
-		font-size: 2rem;
+		font-size: 2.2rem;
 		margin: 0 0 7px 0;
+		font-weight: lighter;
 	}
 	.divisor{
 		background:url('divisor_foot.png') no-repeat;
@@ -413,15 +431,16 @@ nav{
 	.direcciones{
 		padding-right:0;
 		h3{
-			font-size: 2.3rem;
+			font-size: 2.4rem;
 			text-transform: uppercase;
 		}
 		h4{
-			font-size: 1.4rem;
+			font-size: 1.5rem;
 			text-transform: uppercase;
 			margin:0;
 			i{text-transform:none; font-style:normal;}
 		}
+		p{font-size: 1.5rem;}
 		hr {
 			margin:13px 0;
 			border-top: 1px solid #292929;
@@ -441,8 +460,8 @@ nav{
 
 .footer3{
 	background:#1C1C1C;
-	font-size:1.1rem;
-	color:#353535;
-	a{color:#353535;}
+	font-size:1.2rem;
+	color:#403f3f;
+	a{color:#403f3f;}
 }
 /* - - - FIN DE FOOTER - - - */

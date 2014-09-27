@@ -10,6 +10,7 @@ Comotti::Application.routes.draw do
     sign_up: 'sign_up'
   }, controllers: { sessions: "sessions" }
 
+  get 'empresa' => 'site#empresa', as: :empresa
   get 'productos' => 'site#products', as: :products
   get 'promociones' => 'site#promos', as: :promos
   get 'contacto' => 'site#contact', as: :contact

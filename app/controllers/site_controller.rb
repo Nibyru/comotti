@@ -3,6 +3,9 @@ class SiteController < ApplicationController
     @sliders = Slider.all
   end
 
+  def empresa
+  end
+
   def products
     @products = Product.all
   end
