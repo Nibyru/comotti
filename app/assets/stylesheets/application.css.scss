@@ -22,8 +22,8 @@ a{cursor:pointer;}
 
 .navbar-default{margin:0;}
 nav{
-	height: 90px;
-	line-height: 90px;
+	height: 96px;
+	line-height: 96px;
 	background:#FBEFDF;
 	background-image: url('bg_header.png');
 	background-repeat: repeat-x;
@@ -115,6 +115,8 @@ nav{
 
 
 #pastas-pizzas-postres{
+	background:-webkit-linear-gradient(top, #fff 40%, #f7f7f7 40%);
+	background:-moz-linear-gradient(top, #fff 40%, #f7f7f7 40%);
 	text-align:center;
 	h2{
 		font-family: $font2;
@@ -163,13 +165,13 @@ nav{
 	}
 }
 
-.background-gris{
+/*.background-gris{
 	margin-top: -200px;
 	z-index: -1;
 	background:#F7F7F7;
 	width:100%;
 	height:230px;
-}
+}*/
 
 
 /* - - - FIN DE HOME - - - */
@@ -191,6 +193,107 @@ nav{
 		line-height: 100px;
 	}
 }
+
+
+
+
+
+
+
+
+/* - - - EMPRESA - - - */
+
+#empresa{
+	text-align:center;
+	.imagenes-empresa{
+		height: 400px;
+		width: 940px;
+		margin: auto;
+		.cocinero,.bg-letras,.letras,.globos{
+			position:relative;
+		}
+		.cocinero{
+			background:url('cocinero.png') no-repeat;
+			background-size:100%;
+			height: 348px;
+			width:161px;
+			z-index: 3;
+			top: -23px;
+			left: 25px;
+		}
+		.bg-letras{
+			background:url('bg_letras.png') no-repeat;
+			height: 282px;
+			width:848px;
+			z-index: 1;
+			top: -310px;
+		}
+		.letras{
+			background:url('letras.png') no-repeat;
+			height: 185px;
+			width:850px;
+			z-index: 2;
+			top: 50px;
+			left: 197px;
+		}
+		.globos{
+			background:url('globos.png') no-repeat;
+			height: 274px;
+			width:76px;
+			left: 861px;
+			top: -592px;
+		}
+	}
+	.diferencias{
+		padding:0;
+		padding-bottom:100px;
+		background:-webkit-linear-gradient(top, #fff 35%, #f7f7f7 35%);
+		background:-moz-linear-gradient(top, #fff 35%, #f7f7f7 35%);
+		h2{
+			text-align: center;
+			font-family: $font1;
+			color:#ac100b;
+			font-size:4.2rem;
+			font-weight: 300;
+			margin-bottom: 45px;
+			b{font-weight:400};
+		}
+		.img-materias,.img-servicios,.img-clientes{
+			margin: auto;
+			width: 215px;
+			height: 215px;
+			border-radius: 215px;
+			border: 5px solid #f7f7f7;
+		}
+		.img-materias{
+			background: url("img-empresa01.jpg");
+			background-size: 300%;
+			background-position: 380px 280px;
+		}
+		.img-servicios{
+			background: url("img-empresa02.jpg");
+			background-size: 140%;
+			background-position: 240px 205px;
+		}
+		.img-clientes{
+			background: url("img-empresa03.jpg");
+			background-size: 150%;
+			background-position: center;
+		}
+		p{
+			font-family: $font1;
+			color:#666666;
+			font-size:1.5rem;
+			text-transform: uppercase;
+			font-weight: 300;
+			margin-top: 30px;
+			b{font-weight:400;}
+		}
+	}
+}
+
+/* - - - FIN DE EMPRESA - - - */
+
 
 
 
@@ -293,6 +396,79 @@ nav{
 					i{color:#CCC; font-weight:100; font-style:normal;}
 				}
 			}
+		}
+	}
+}
+
+/* - - - FIN DE PRODUCTOS - - - */
+
+
+
+
+/* - - - PRODUCTOS - - - */
+
+#promo{
+	margin-bottom:100px;
+	text-transform:uppercase;
+	.lista-promociones{
+		margin-top:20px;
+		padding:0;
+		li{
+			margin-top: 30px;
+			text-align: center;
+			.promocion{
+				background:#F7F7F7;
+				padding:0;
+				padding-bottom:15px;
+				.img-promo{
+					height: 190px;
+					width: 100%;
+					overflow: hidden;
+					img{
+						width: 100%;
+						height: auto;
+					}
+				}
+				h3{
+					font-family: $font2;
+					font-weight: bold;
+					color: #d00e06;
+					font-size: 5.2rem;
+					text-align: left;
+				}
+				h4{
+					font-family:$font3;
+					color: #646464;
+					font-size: 1.5rem;
+					text-align: left;
+				}
+				p{
+					font-family:$font1;
+					color:#969696;
+					font-size: 1.5rem;
+					text-align: left;
+				}
+				.precio-promo{
+					margin-top:30px;
+					margin-bottom: 10px;
+					text-align: center;
+					height:67px;
+					background:url('precio.png') no-repeat;
+					background-position:center;
+					font-family: $font1;
+					font-size:4.8rem;
+					color:#fff;
+					b{font-weight:100; font-style:normal;}
+				}
+				i{
+					text-align: center;
+					font-family:$font1;
+					color:#969696;
+					font-size: 1.2rem;
+				}
+			}
+			
+			
 		}
 	}
 }

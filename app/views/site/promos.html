@@ -1,12 +1,39 @@
-<h1>Promociones</h1>
-<ul>
-  <% @promos.each do |promo| %>
-    <li>
-      <strong><%= promo.title %></strong>
-      <br>
-      <span>$<%= promo.price %></span>
-      <br>
-      <p><%= promo.description %></p>
-    </li>
-  <% end %>
-</ul>
+<div id="promo">
+
+	<div class="titulo">
+    	<h1>Promociones</h1>
+	</div>
+
+	<div class="container">
+		<div class="row">
+
+			<ul class="col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1 lista-promociones">
+
+				<% @promos.each do |promo| %>
+
+					<li class="col-lg-6 col-md-6">
+						<div class="col-lg-12 col-md-12 promocion">
+							<div class="img-promo">
+							  <%= image_tag(promo.photo.url, size: '100') if product.photo %>
+							</div>
+							<div class="col-lg-12 col-md-12">
+								<h3><%= promo.title %></h3>
+								<h4><%= promo.description %></h4>
+								<p>Descripción2</p>
+								<div class="precio-promo">
+									<span><b>$</b><%= promo.price %></span>
+								</div>
+								<i>Promo válida del ... al ...</i>
+							</div>
+						</div>
+
+					</li>
+
+				<% end %>
+
+			</ul>
+
+		</div>
+	</div>
+
+</div>
