@@ -13,7 +13,7 @@ gem 'carrierwave'
 gem 'devise'
 gem 'inherited_resources'
 gem 'rails_admin'
-
+gem 'net-ssh', '2.8.0'
 group :doc do
   gem 'sdoc', require: false
 end
