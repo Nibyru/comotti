@@ -8,7 +8,7 @@ Comotti::Application.routes.draw do
     password: 'secret',
     registration: 'register',
     sign_up: 'sign_up'
-  }, controllers: { sessions: "sessions" }
+  }, controllers: { sessions: "sessions", registrations: "registrations" }
 
   get 'empresa' => 'site#empresa', as: :empresa
   get 'productos' => 'site#products', as: :products
