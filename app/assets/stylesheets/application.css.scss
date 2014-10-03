@@ -580,7 +580,7 @@ nav{
 /* - - - FOOTER - - - */
 .footer1{
 	background:#212121;
-	height:100px;
+	height:108px;
 	line-height:100px;
 	.social{
 		img{height:30px;}
@@ -588,7 +588,7 @@ nav{
 }
 .footer2{
 	background:#1E1E1E;
-	padding: 15px 0 50px 0;
+	padding: 15px 0 42px 0;
 	.horarios{padding-left:0;padding-right:0;}
 	h3{
 		font-family:$font2;
@@ -649,6 +649,8 @@ nav{
 	background:#1C1C1C;
 	font-size:1.2rem;
 	color:#403f3f;
+	height: 60px;
+	padding-top: 27px;
 	a{color:#403f3f;}
 }
 /* - - - FIN DE FOOTER - - - */
