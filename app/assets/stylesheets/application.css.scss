@@ -20,7 +20,11 @@ a{cursor:pointer;}
 }
 /* - - - HEADER - - - */
 
-.navbar-default{margin:0;}
+.navbar-default{
+	margin:0;
+	background-color: transparent;
+	border: none;
+}
 
 nav{
 	height: 96px;
@@ -55,11 +59,12 @@ nav{
 /* - - - HOME - - - */
 #slider{
 	width:100%;
-	min-height:430px;
+	min-height:492px;
 	background: url('textura_slider.jpg');
 	text-align:center;
-	padding-top:45px;
+	padding-top:55px;
 	margin-bottom:180px;
+	margin-top: -10px;
 	.titulo-home {
 		height: 120px;
 		span,h1{
@@ -116,10 +121,11 @@ nav{
 }
 
 
-#pastas-pizzas-postres{
-	background:-webkit-linear-gradient(top, #fff 40%, #f7f7f7 40%);
-	background:-moz-linear-gradient(top, #fff 40%, #f7f7f7 40%);
+#product-examples{
+	background:-webkit-linear-gradient(top, #fff 38%, #f7f7f7 20%);
+	background:-moz-linear-gradient(top, #fff 38%, #f7f7f7 20%);
 	text-align:center;
+	height: 415px;
 	h2{
 		font-family: $font2;
 		font-weight: lighter;
@@ -127,27 +133,14 @@ nav{
 		font-size: 5rem;
 		color: #990e09;
 	}
-	.img-pastas,.img-pizzas,.img-postres{
+	.img-product{
 		margin: auto;
 		width: 215px;
 		height: 215px;
 		border-radius: 215px;
 		border: 5px solid #f7f7f7;
-	}
-	.img-pastas{
-		background: url("01.jpg");
-		background-size: 300%;
-		background-position: 380px 280px;
-	}
-	.img-pizzas{
-		background: url("02.jpg");
-		background-size: 140%;
-		background-position: 240px 205px;
-	}
-	.img-postres{
-		background: url("03.jpg");
-		background-size: 150%;
-		background-position: center;
+		background-size: cover;
+		background-position: 50% 50%;
 	}
 	.ver-mas{
 		margin: auto;
@@ -156,6 +149,7 @@ nav{
 		height: 38px;
 		background: url("ver_todo.png") no-repeat;
 		background-position: top;
+		background-size: 85%;
 		&:hover{background-position:bottom;}
 		p{
 			font-family: $font1;
@@ -177,6 +171,7 @@ nav{
 	background: url('textura_slider.jpg');
 	text-align: center;
 	height: 100px;
+	margin-top: -6px;
 	h1{
 		font-family: $font2;
 		color: #4C4741;
@@ -527,12 +522,14 @@ nav{
 
 /* - - - MAPA - - - */
 
-#mapa{
+#mapa-container{
 	.opciones-mapa{
 		width:100%;
 		height:154px;
 		background:url('base_mapa.png');
 		padding-top:40px;
+		z-index: 10;
+		position: relative;
 		.ubicar-mapa{
 			margin:auto;
 			width: 300px;
@@ -554,7 +551,10 @@ nav{
 		}
 	}
 }
-
+#map {
+	height: 464px;
+	margin-top: -10px;
+}
 
 /* - - - FIN DE MAPA - - - */
 
@@ -563,7 +563,7 @@ nav{
 /* - - - FOOTER - - - */
 .footer1{
 	background:#212121;
-	height:100px;
+	height:108px;
 	line-height:100px;
 	.social{
 		img{height:30px;}
@@ -571,7 +571,7 @@ nav{
 }
 .footer2{
 	background:#1E1E1E;
-	padding: 15px 0 50px 0;
+	padding: 15px 0 42px 0;
 	.horarios{padding-left:0;padding-right:0;}
 	h3{
 		font-family:$font2;
@@ -636,6 +636,8 @@ nav{
 	background:#1C1C1C;
 	font-size:1.2rem;
 	color:#403f3f;
+	height: 60px;
+	padding-top: 27px;
 	a{color:#403f3f;}
 	.desarrollo{
 		padding-right:0;
