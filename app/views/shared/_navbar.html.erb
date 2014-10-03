@@ -1,5 +1,6 @@
+<!-- 
 <% unless is_a?(Devise::SessionsController) %>
-<!-- <nav>  -->
+
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="row">
@@ -7,7 +8,6 @@
           <%= link_to image_tag("logo_head.png", class:"logo"), root_path %>
         </div>
         <div class="col-lg-9 col-md-9">
-          <!-- <ul class="nav navbar">-->
           <ul>         
             <li class=<%= 'active' if current_page?(action: :index)%> >
               <%= link_to 'la empresa', empresa_path %>
@@ -27,7 +27,45 @@
     </div>
   </nav>
 <% end %>
+-->
 
-<div class="borde">
-  <!-- <%= image_tag ('triang.png') %> -->
-</div>
+<% unless is_a?(Devise::SessionsController) %>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div class="row">
+        
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+              <%= link_to image_tag("logo_head.png", class:"logo"), root_path %>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav pull-right">
+              <div class="menu">
+                <li class=<%= 'active' if current_page?(action: :index)%> >
+                  <%= link_to 'la empresa', empresa_path %>
+                </li>
+                <li class=<%= 'active' if current_page?(action: :products)%> >
+                  <%= link_to 'productos', products_path %>
+                </li>
+                <li class=<%= 'active' if current_page?(action: :promos)%> >
+                  <%= link_to 'promociones', promos_path %>
+                </li>
+                <li class=<%= 'active' if current_page?(action: :contact)%> >
+                  <%= link_to 'contacto', contact_path %>
+                </li>
+              </div>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        
+      </div>
+    </div><!-- /.container-fluid -->
+  </nav>
+<% end %>

@@ -21,6 +21,7 @@ a{cursor:pointer;}
 /* - - - HEADER - - - */
 
 .navbar-default{margin:0;}
+
 nav{
 	height: 96px;
 	line-height: 96px;
@@ -38,6 +39,7 @@ nav{
 				font-family: $font2;
 				color: #F7F7F7;
 				font-size: 3rem;
+				font-weight: bold;
 				text-transform: uppercase;
 				&:hover{color:#460906;}
 			}
@@ -164,14 +166,6 @@ nav{
 		}
 	}
 }
-
-/*.background-gris{
-	margin-top: -200px;
-	z-index: -1;
-	background:#F7F7F7;
-	width:100%;
-	height:230px;
-}*/
 
 
 /* - - - FIN DE HOME - - - */
@@ -495,11 +489,11 @@ nav{
 			width: 100%;
 			height: 60px;
 			border: none;
-			background:url('input.jpg');
+			background:url('input.jpg') no-repeat;
 			margin-bottom: 20px;
 		}
 		textarea{
-			background:url('textarea.jpg');
+			background:url('textarea.jpg') no-repeat;
 			width: 100%;
 			max-width: 100%;
 			height: 208px;
@@ -631,6 +625,10 @@ nav{
 		border-top: 1px solid #292929;
 		color: #505050;
 		b{color: #C70E34;}
+		.data-fiscal{
+			text-align:right;
+			padding-right:0;
+		}
 	}
 }
 
@@ -639,5 +637,227 @@ nav{
 	font-size:1.2rem;
 	color:#403f3f;
 	a{color:#403f3f;}
+	.desarrollo{
+		padding-right:0;
+		text-align:right;
+	}
 }
 /* - - - FIN DE FOOTER - - - */
+
+
+
+
+
+/* - - - MOBILE 992px - - - */
+
+@media only screen and (max-width: 992px) {
+
+/* - - - HOME - - - */
+	#slider .titulo-home{
+		h1{font-size: 5rem; margin: 0;}
+		span img{height: 50px;}
+		h4{font-size: 1.6rem;}
+	}
+
+	#pastas-pizzas-postres{
+		background:-webkit-linear-gradient(top, #fff 15%, #f7f7f7 15%);
+		background:-moz-linear-gradient(top, #fff 15%, #f7f7f7 15%);
+	}
+/* - - - FIN DE HOME - - - */
+
+	.titulo{height: 70px;}
+	.titulo h1{line-height: 70px;}
+
+
+/* - - - EMPRESA - - - */
+	#empresa{
+		.imagenes-empresa {
+			height: auto;
+			width: auto;
+			margin: auto;
+			.cocinero {
+				background: url("mobile_cocinero.png") no-repeat;
+				background-size: 100%;
+				height: 256px;
+				width: 422px;
+				margin: auto;
+				top: 15px;
+				left: 0;
+			}
+			.bg-letras {
+				background: url("mobile_bg_letras.png") no-repeat;
+				height: 429px;
+				width: 422px;
+				z-index: 4;
+				margin: auto;
+				top: 0px;
+			}
+			.letras {
+				background: url("mobile_letras.png") no-repeat;
+				height: 400px;
+				width: 382px;
+				margin: auto;
+				top: 15px;
+				left: 0;
+			}
+			.globos{display:none;}
+		}
+		.diferencias{
+			background:-webkit-linear-gradient(top, #fff 20%, #f7f7f7 20%);
+			background:-moz-linear-gradient(top, #fff 20%, #f7f7f7 20%);
+			p{font-size: 2rem;}
+		}
+	}
+/* - - - FIN DE EMPRESA - - - */
+
+	#productos{
+		.fitros-productos{
+			.filtro {margin-bottom:20px;}
+		}
+		.lista-productos{
+			li{
+				.img-producto {
+					height:auto;
+					img{width:100%; height:auto;}
+				}
+			}
+		}
+	}
+
+/* - - - FIN FOOTER - - - */
+	.footer1 .social{text-align:right;}
+	.footer2{
+		.container-footer{margin-left: 16.6666666667%;}
+		.divisor {
+			background: url("divisor_mobile.png") no-repeat;
+			background-position: center;
+			background-size: 100% auto;
+			height: 30px;
+			width: 80%;
+			margin-left: 10%;
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+		.direcciones h3{margin-top: 0;}
+	}
+/* - - - FIN DE FOOTER - - - */
+}
+
+/* - - - FIN DE MOBILE 992px - - - */
+
+
+
+
+/* - - - MOBILE 768px - - - */
+
+@media only screen and (max-width: 767px) {
+
+/* - - - HEADER - - - */
+	.navbar-default .navbar-collapse{
+		border-top:1px solid #900504;
+		background: #A60504;
+		margin: -8px -15px;
+		padding:0;
+	}
+	.pull-right {
+		float: none !important;
+	}
+	nav{
+		height: 75px;
+		line-height: 75px;
+		img{height:45px;}
+		ul{
+			li{
+				display: block;
+				text-align: center;
+				height: 66px;
+				line-height: 66px;
+				border-bottom: 1px solid #900504;
+				margin: 0;
+				a{font-size: 3.6rem;}
+			}
+		}
+	}
+	.nav{margin:0;}
+
+	.navbar-toggle {
+		padding: 0;
+		margin-top: 20px;
+		border-radius: 0;
+		border: none !important;
+	}
+
+	.navbar-toggle .icon-bar {
+		display: block;
+		width: 35px;
+		height: 5px;
+		box-shadow: 0 1px 3px #000;
+		margin-bottom: 5px;
+		border-radius: 0;
+		padding: 0;
+		background-color: #fff !important;
+	}
+/* - - - FIN DE HEADER - - - */
+
+	
+/* - - - HOME - - - */
+	#slider .titulo-home{
+		h1{font-size: 4.7rem; margin: 0;}
+		span img{height: 55px;}
+		h4{font-size: 1.5rem;}
+	}
+/* - - - FIN DE HOME - - - */
+
+	.footer2 .container-footer{margin:0;}
+}
+
+/* - - - FIN DE MOBILE 768px - - - */
+
+
+
+
+/* - - - MOBILE 480px - - - */
+
+@media only screen and (max-width: 480px) {
+
+/* - - - HOME - - - */
+	#slider .titulo-home{
+		h1{font-size: 3.5rem;}
+		span img{height: 40px;}
+		h4{font-size: 1.15rem;}
+	}
+/* - - - FIN DE HOME - - - */
+
+/* - - - FOOTER - - - */
+	.footer1 .social{text-align:right;}
+	
+	.footer2{
+		.direcciones h3 {
+			margin-top: 0;
+		}
+		.divisor {
+			background: url("divisor_mobile.png") no-repeat;
+			background-position: center;
+			background-size: 100% auto;
+			height: 30px;
+			width: 80%;
+			margin-left:10%;
+			margin-top:30px;
+			margin-bottom:30px;
+		}
+		.delivery-data .data-fiscal {
+			text-align: center;
+			padding: 0;
+			margin-top: 20px;
+		}
+	}
+	
+	.footer3{
+		.desarrollo{
+			text-align:center;
+		}
+	}
+/* - - - FIN DE FOOTER - - - */
+}
+
+/* - - - FIN DE MOBILE 480px - - - */
