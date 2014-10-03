@@ -119,7 +119,7 @@ nav{
 }
 
 
-#pastas-pizzas-postres{
+#product-examples{
 	background:-webkit-linear-gradient(top, #fff 38%, #f7f7f7 20%);
 	background:-moz-linear-gradient(top, #fff 38%, #f7f7f7 20%);
 	text-align:center;
@@ -131,27 +131,14 @@ nav{
 		font-size: 5rem;
 		color: #990e09;
 	}
-	.img-pastas,.img-pizzas,.img-postres{
+	.img-product{
 		margin: auto;
 		width: 215px;
 		height: 215px;
 		border-radius: 215px;
 		border: 5px solid #f7f7f7;
-	}
-	.img-pastas{
-		background: url("01.jpg");
-		background-size: 300%;
-		background-position: 380px 280px;
-	}
-	.img-pizzas{
-		background: url("02.jpg");
-		background-size: 140%;
-		background-position: 240px 205px;
-	}
-	.img-postres{
-		background: url("03.jpg");
-		background-size: 150%;
-		background-position: center;
+		background-size: cover;
+		background-position: 50% 50%;
 	}
 	.ver-mas{
 		margin: auto;
@@ -160,6 +147,7 @@ nav{
 		height: 38px;
 		background: url("ver_todo.png") no-repeat;
 		background-position: top;
+		background-size: 85%;
 		&:hover{background-position:bottom;}
 		p{
 			font-family: $font1;
@@ -189,6 +177,7 @@ nav{
 	background: url('textura_slider.jpg');
 	text-align: center;
 	height: 100px;
+	margin-top: -6px;
 	h1{
 		font-family: $font2;
 		color: #4C4741;

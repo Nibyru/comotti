@@ -3,6 +3,7 @@ class SiteController < ApplicationController
     @sliders = []
     @sliders << Slider.find_by_show_slider(true) << Promo.find_by_show_slider(true) << Product.find_by_show_slider(true)
     @sliders.compact!
+    @categories = Category.all
   end
 
   def empresa

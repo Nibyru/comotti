@@ -41,31 +41,19 @@
 		</div>
 	</div>
 
-	<div id="pastas-pizzas-postres">
+	<div id="product-examples">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
-					<div class="col-lg-4 col-md-4">
-						<h2>Pastas</h2>
-						<div class="img-pastas"></div>
-						<div class="ver-mas">
-							<a><p>Ver todas <b>las pastas</b></p></a>
+					<% @categories.each do |category| %>
+						<div class="col-lg-4 col-md-4">
+							<h2><%= category.title %></h2>
+							<div class="img-product" style="background-image: url('<%= photo_example(category) %>')"></div>
+							<div class="ver-mas">
+								<a><p>Ver todas <b>las <%= category.title %></b></p></a>
+							</div>
 						</div>
-					</div>
-					<div class="col-lg-4 col-md-4">
-						<h2>Pizzas y tartas</h2>
-						<div class="img-pizzas"></div>
-						<div class="ver-mas">
-							<a><p>Ver todas <b>las pizzas</b></p></a>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4">
-						<h2>Postres</h2>
-						<div class="img-postres"></div>
-						<div class="ver-mas">
-							<a><p>Ver todos <b>los postres</b></p></a>
-						</div>
-					</div>
+					<% end %>
 				</div>
 			</div>
 		</div>
