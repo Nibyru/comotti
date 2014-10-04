@@ -534,7 +534,7 @@ nav{
 			margin:auto;
 			width: 300px;
 			height: 73px;
-			background:url('ubicar_mapa.png');
+			background:url('ubicar_mapa.png') no-repeat;
 			background-position:top;
 			&:hover{
 				background-position:bottom;
@@ -566,7 +566,22 @@ nav{
 	height:108px;
 	line-height:100px;
 	.social{
-		img{height:30px;}
+		img{height:35px;}
+		img:hover{-webkit-filter: brightness(10);-moz-filter: brightness(10);}
+		img,.botones{display:inline-block;vertical-align: middle;}
+		.botones{
+			height: 50px;
+			padding-left:50px;
+			.btn-fb,.btn-twitter{
+				display: block;
+				position: relative;
+				height: 20px;
+				line-height: 20px;
+				text-align: left;
+			}
+			.btn-twitter{margin-top:10px;}
+		}
+		
 	}
 }
 .footer2{
@@ -787,7 +802,10 @@ nav{
 		margin-top: 20px;
 		border-radius: 0;
 		border: none !important;
+		&:hover{background:transparent;}
 	}
+
+	.navbar-default .navbar-toggle:hover{background-color: transparent;}
 
 	.navbar-toggle .icon-bar {
 		display: block;
@@ -810,6 +828,25 @@ nav{
 	}
 /* - - - FIN DE HOME - - - */
 
+
+	#mapa-container{
+		.opciones-mapa{
+			padding-top:0;
+			.ubicar-mapa{
+				margin: auto;
+				width: 200px;
+				height: 48px;
+				background-size: 100% auto;
+				margin-top: 20px;
+				p{
+					font-size: 3rem;
+					line-height: 45px
+				}
+			}
+		}
+	}
+	
+	.footer1 .social .botones{display:none;}
 	.footer2 .container-footer{margin:0;}
 }
 
@@ -854,6 +891,7 @@ nav{
 		}
 	}
 	
+
 	.footer3{
 		.desarrollo{
 			text-align:center;
