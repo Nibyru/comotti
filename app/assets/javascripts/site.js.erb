@@ -37,7 +37,15 @@ ready = function() {
       $(this).addClass('active');
       var groupName = $(this).attr('data-group');
       console.log(groupName);
-      $grid.shuffle('shuffle', groupName );
+      // $grid.shuffle('shuffle', groupName );
+      // Filters elements with a data-title attribute with less than 10 characters
+      $grid.shuffle('shuffle', function($el, shuffle) {
+        var el;
+        if ($el.data('groups').indexOf(groupName) > -1){
+          el = $el;
+        }
+        return el
+      });
   });
 };
 
