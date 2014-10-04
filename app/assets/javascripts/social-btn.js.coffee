@@ -28,7 +28,7 @@ restoreFacebookRoot = ->
 
 loadFacebookSDK = ->
   window.fbAsyncInit = initializeFacebookSDK
-  $.getScript("//connect.facebook.net/en_US/all.js#xfbml=1")
+  $.getScript("//connect.facebook.net/es_AR/all.js#xfbml=1")
 
 initializeFacebookSDK = ->
   FB.init
@@ -45,5 +45,5 @@ renderTweetButtons = ->
   $('.twitter-share-button').each ->
     button = $(this)
     button.attr('data-url', document.location.href) unless button.data('url')?
-    button.attr('data-text', document.title) unless button.data('text')?  
+    button.attr('data-text', 'La mejor calidad y variedad en pastas, pizzas, tartas y postres') unless button.data('text')?
   twttr.widgets.load()
