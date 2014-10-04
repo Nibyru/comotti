@@ -11,6 +11,7 @@ class SiteController < ApplicationController
 
   def products
     @products = Product.all
+    @categories = Category.all
   end
 
   def promos

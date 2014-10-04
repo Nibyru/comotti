@@ -11,15 +11,11 @@
         <div class="col-lg-3 col-md-3">
           <a data-group='all'><div class="filtro">Todos</div></a>
         </div>
-        <div class="col-lg-3 col-md-3">
-          <a data-group='pastas'><div class="filtro">Pastas</div></a>
-        </div>
-        <div class="col-lg-3 col-md-3">
-          <a data-group='pizzas'><div class="filtro">Pizzas</div></a>
-        </div>
-        <div class="col-lg-3 col-md-3">
-          <a data-group='postres'><div class="filtro">Postres</div></a>
-        </div>
+        <% @categories.each do |category| %>
+          <div class="col-lg-3 col-md-3">
+            <a data-group=<%= category.title %>><div class="filtro"><%= category.title %></div></a>
+          </div>
+        <% end %>
       </div>
 
       <ul class="col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1 lista-productos">
