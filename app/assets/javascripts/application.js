@@ -5,6 +5,7 @@
 //= require bootstrap
 //= require admin
 //= require suffle.min
+//= require date
 //= require site
 //= require social-btn
 

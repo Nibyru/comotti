@@ -1,5 +1,6 @@
 var ready;
 ready = function() {
+  // map
   if ($('#map').length > 0){
     var map = L.mapbox.map('map', 'sarriagada.j4p9400k', {
       accessToken: 'pk.eyJ1Ijoic2FycmlhZ2FkYSIsImEiOiJPMFJEZy1BIn0.6iTs7zB1bZisiF07DGkwfA'
@@ -22,6 +23,26 @@ ready = function() {
       map.setView([-26.8105481,-65.2801369], 15);
     });
   }
+  // cartel
+  var today = new Date();
+  var open_time = new Date(today.getYear(), today.getMonth(), today.getDay(), 9, 45);
+  var close_time = new Date(today.getYear(), today.getMonth(), today.getDay(), 14, 00);
+  var open_time_afternoon = new Date(today.getYear(), today.getMonth(), today.getDay(), 17, 30);
+  var close_time_afternoon = new Date(today.getYear(), today.getMonth(), today.getDay(), 22, 00);
+
+  if (today.getDay() != 6 && today.getDay() != 7){
+    if (Date.today().between(open_time, close_time) || Date.today().between(open_time2, close_time2)){
+      $('.cartel').attr('src', '<%= asset_path("boton_abierto.png")%>');
+    }else{
+      $('.cartel').attr('src', '<%= asset_path("boton_cerrado.png")%>');
+    }
+  }else if(today.getDay() == 6){
+    if (Date.today().between(open_time, close_time)){
+      $('.cartel').attr('src', '<%= asset_path("boton_abierto.png")%>');
+    }else{
+      $('.cartel').attr('src', '<%= asset_path("boton_cerrado.png")%>');
+    }
+  }
 
   // products
   var $grid = $('.lista-productos');
@@ -36,9 +57,6 @@ ready = function() {
       $('.fitros-productos a').removeClass('active');
       $(this).addClass('active');
       var groupName = $(this).attr('data-group');
-      console.log(groupName);
-      // $grid.shuffle('shuffle', groupName );
-      // Filters elements with a data-title attribute with less than 10 characters
       $grid.shuffle('shuffle', function($el, shuffle) {
         var el;
         if ($el.data('groups').indexOf(groupName) > -1){
