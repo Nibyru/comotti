@@ -307,11 +307,11 @@ nav{
 			text-transform: uppercase;
 			font-weight: 300;
 			line-height: 34px;
-			&:hover{
-				background-position:bottom;
-				color: #FFF;
-				font-weight: 400;
-			}
+		}
+		.filtro:hover, .active .filtro{
+			background-position:bottom;
+			color: #FFF;
+			font-weight: 400;
 		}
 	}
 	.lista-productos{
