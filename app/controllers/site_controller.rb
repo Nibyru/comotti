@@ -19,5 +19,6 @@ class SiteController < ApplicationController
   end
 
   def contact
+    @message = Message.new
   end
 end

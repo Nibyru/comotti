@@ -1,15 +1,14 @@
 class Contact < ActionMailer::Base
-  default from: "from@example.com"
 
-  def admin_email(user)
-    @user = user
+  def admin_email(message)
+    @message = message
     @url  = 'http://www.comottipastas.com'
-    mail(to: @user.email, subject: 'Nuevo email de contacto')
+    mail(to: 'dotestudiografico@gmail.com', subject: 'Nuevo email de contacto')
   end
 
-  def user_email(user)
-    @user = user
+  def message_email(message)
+    @message = message
     @url  = 'http://www.comottipastas.com'
-    mail(to: @user.email, subject: 'La mejor calidad y variedad en pastas, pizzas, tartas y postres')
+    mail(to: @message.mail, subject: 'Comotti - La mejor calidad y variedad en pastas, pizzas, tartas y postres')
   end
 end
