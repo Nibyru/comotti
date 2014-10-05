@@ -1,3 +1,4 @@
 class Message < ActiveRecord::Base
-  validates :name, :phone, :cellphone, :email, :body, presence: true
+  include ActiveModel::ForbiddenAttributesProtection
+  validates :name, :phone, :cellphone, :mail, :body, presence: true
 end

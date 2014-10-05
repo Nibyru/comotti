@@ -6,7 +6,7 @@ class Contact < ActionMailer::Base
     mail(to: 'dotestudiografico@gmail.com', subject: 'Nuevo email de contacto')
   end
 
-  def message_email(message)
+  def user_email(message)
     @message = message
     @url  = 'http://www.comottipastas.com'
     mail(to: @message.mail, subject: 'Comotti - La mejor calidad y variedad en pastas, pizzas, tartas y postres')
