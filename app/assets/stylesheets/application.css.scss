@@ -566,6 +566,13 @@ nav{
 	height: 464px;
 	margin-top: -10px;
 }
+.leaflet-popup-content{
+	text-align: center;
+	img {
+		min-width: 200px;
+		width: 100%;
+	}
+}
 
 /* - - - FIN DE MAPA - - - */
 

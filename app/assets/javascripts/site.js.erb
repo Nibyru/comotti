@@ -11,10 +11,31 @@ ready = function() {
       iconSize: [55, 66],
       iconAnchor: [27, 65]
     });
-    L.marker([-26.818881351038332, -65.20836353302002], {icon: myIcon}).addTo(map);
-    L.marker([-26.823745251292927, -65.20510196685791], {icon: myIcon}).addTo(map);
-    L.marker([-26.8069481,-65.2941369], {icon: myIcon}).addTo(map);
-    L.marker([-26.8175774,-65.2696317], {icon: myIcon}).addTo(map);
+
+    var points = [{
+      direction: 'SANTA FE 909',
+      image: '<%= asset_path("category-example.jpg") %>',
+      location: [-26.818881351038332, -65.20836353302002]
+    },
+    {
+      direction: 'SANTIAGO 684',
+      image: '<%= asset_path("category-example.jpg") %>',
+      location: [-26.823745251292927, -65.20510196685791]
+    },{
+      direction: 'LOBO DE LA VEGA 1ª cuadra',
+      image: '<%= asset_path("category-example.jpg") %>',
+      location: [-26.8069481,-65.2941369]
+    },{
+      direction: 'AV. ACONQUIJA 299',
+      image: '<%= asset_path("category-example.jpg") %>',
+      location: [-26.8175774,-65.2696317]
+    }]
+
+    points.forEach(function(point){
+      console.log(point);
+      var content = '<p>' + point.direction + '</p><img src="' + point.image + '">'
+      L.marker(point.location, {icon: myIcon}).addTo(map).bindPopup(content,{closeButton: false, offset: [0, -40]});
+    });
 
     $('.ubicar-mapa').first().click(function() {
       map.setView([-26.818881351038332, -65.20836353302002], 15);
@@ -31,16 +52,20 @@ ready = function() {
   var close_time_afternoon = new Date(today.getYear(), today.getMonth(), today.getDay(), 22, 00);
 
   if (today.getDay() != 6 && today.getDay() != 7){
-    if (Date.today().between(open_time, close_time) || Date.today().between(open_time2, close_time2)){
+    if (Date.today().between(open_time, close_time) || Date.today().between(open_time_afternoon, close_time_afternoon)){
       $('.cartel').attr('src', '<%= asset_path("boton_abierto.png")%>');
+      $('.luces').show();
     }else{
       $('.cartel').attr('src', '<%= asset_path("boton_cerrado.png")%>');
+      $('.luces').hide();
     }
   }else if(today.getDay() == 6){
     if (Date.today().between(open_time, close_time)){
       $('.cartel').attr('src', '<%= asset_path("boton_abierto.png")%>');
+      $('.luces').show();
     }else{
       $('.cartel').attr('src', '<%= asset_path("boton_cerrado.png")%>');
+      $('.luces').hide();
     }
   }
 
