@@ -1,34 +1,3 @@
-<!-- 
-<% unless is_a?(Devise::SessionsController) %>
-
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-3 col-md-3">
-          <%= link_to image_tag("logo_head.png", class:"logo"), root_path %>
-        </div>
-        <div class="col-lg-9 col-md-9">
-          <ul>         
-            <li class=<%= 'active' if current_page?(action: :index)%> >
-              <%= link_to 'la empresa', empresa_path %>
-            </li>
-            <li class=<%= 'active' if current_page?(action: :products)%> >
-              <%= link_to 'productos', products_path %>
-            </li>
-            <li class=<%= 'active' if current_page?(action: :promos)%> >
-              <%= link_to 'promociones', promos_path %>
-            </li>
-            <li class=<%= 'active' if current_page?(action: :contact)%> >
-              <%= link_to 'contacto', contact_path %>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
-<% end %>
--->
-
 <% unless is_a?(Devise::SessionsController) %>
   <nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
@@ -49,18 +18,26 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav pull-right">
               <div class="menu">
-                <li class=<%= 'active' if current_page?(action: :index)%> >
-                  <%= link_to 'la empresa', empresa_path %>
-                </li>
-                <li class=<%= 'active' if current_page?(action: :products)%> >
-                  <%= link_to 'productos', products_path %>
-                </li>
-                <li class=<%= 'active' if current_page?(action: :promos)%> >
-                  <%= link_to 'promociones', promos_path %>
-                </li>
-                <li class=<%= 'active' if current_page?(action: :contact)%> >
-                  <%= link_to 'contacto', contact_path %>
-                </li>
+                <%= link_to (empresa_path) do %>
+                  <li class=<%= 'active' if current_page?(action: :empresa)%> >
+                    La empresa
+                  </li>
+                <% end %>
+                <%= link_to (products_path) do %>
+                  <li class=<%= 'active' if current_page?(action: :products)%> >
+                    Productos
+                  </li>
+                <% end %>
+                <%= link_to (promos_path) do %>
+                  <li class=<%= 'active' if current_page?(action: :promos)%> >
+                    Promociones
+                  </li>
+                <% end %>
+                <%= link_to (contact_path) do %>
+                  <li class=<%= 'active' if current_page?(action: :contact)%> >
+                    Contacto
+                  </li>
+                <% end %>
               </div>
             </ul>
           </div><!-- /.navbar-collapse -->
@@ -69,3 +46,24 @@
     </div><!-- /.container-fluid -->
   </nav>
 <% end %>
+
+
+
+<!--
+<ul class="nav navbar-nav pull-right">
+  <div class="menu">
+    <li class=<%= 'active' if current_page?(action: :empresa)%> >
+      <%= link_to 'la empresa', empresa_path %>
+    </li>
+    <li class=<%= 'active' if current_page?(action: :products)%> >
+      <%= link_to 'productos', products_path %>
+    </li>
+    <li class=<%= 'active' if current_page?(action: :promos)%> >
+      <%= link_to 'promociones', promos_path %>
+    </li>
+    <li class=<%= 'active' if current_page?(action: :contact)%> >
+      <%= link_to 'contacto', contact_path %>
+    </li>
+  </div>
+</ul>
+-->

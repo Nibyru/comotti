@@ -13,7 +13,10 @@ $font3: 'Roboto Slab', serif;
 	margin:0;
 }
 
+
 a{cursor:pointer;}
+
+
 
 .pad-left{
 	padding-left:0;
@@ -34,20 +37,21 @@ nav{
 	background-repeat: repeat-x;
 	background-size: auto 100%;
 	z-index:100;
+	border-radius:none;
 	ul{
 		text-align: right;
 		li{
+			border-radius:none;
 			display: inline-block;
 			margin: 0 15px;
-			a{			
-				font-family: $font2;
-				color: #F7F7F7;
-				font-size: 3rem;
-				font-weight: bold;
-				text-transform: uppercase;
-				&:hover{color:#460906;}
-			}
+			font-family: $font2;
+			color: #F7F7F7;
+			font-size: 3rem;
+			font-weight: bold;
+			text-transform: uppercase;
+			&:hover{color:#460906;}
 		}
+		li.active{color:#460906;}
 	}
 }
 
@@ -205,10 +209,12 @@ nav{
 
 #empresa{
 	text-align:center;
+	.container-empresa{padding:0;}
 	.imagenes-empresa{
-		height: 400px;
+		height: 330px;
 		width: 940px;
 		margin: auto;
+		margin-bottom: 70px;
 		.cocinero,.bg-letras,.letras,.globos{
 			position:relative;
 		}
@@ -267,13 +273,13 @@ nav{
 		}
 		.img-materias{
 			background: url("img-empresa01.jpg");
-			background-size: 300%;
-			background-position: 380px 280px;
+			background-size: 150%;
+			background-position: center;
 		}
 		.img-servicios{
 			background: url("img-empresa02.jpg");
-			background-size: 140%;
-			background-position: 240px 205px;
+			background-size: 150%;
+			background-position: center;
 		}
 		.img-clientes{
 			background: url("img-empresa03.jpg");
@@ -405,7 +411,7 @@ nav{
 
 
 
-/* - - - PRODUCTOS - - - */
+/* - - - PROMOCIONES - - - */
 
 #promo{
 	margin-bottom:100px;
@@ -432,9 +438,10 @@ nav{
 				h3{
 					font-family: $font2;
 					font-weight: bold;
-					color: #d00e06;
+					color: #f00600;
 					font-size: 5.2rem;
 					text-align: left;
+					margin-top: 30px;
 				}
 				h4{
 					font-family:$font3;
@@ -473,7 +480,7 @@ nav{
 	}
 }
 
-/* - - - FIN DE PRODUCTOS - - - */
+/* - - - FIN DE PROMOCIONES - - - */
 
 
 
@@ -671,8 +678,10 @@ nav{
 	color:#403f3f;
 	height: 60px;
 	padding-top: 27px;
+	font-family:$font1;
 	a{color:#403f3f;}
-	.desarrollo{
+	a:hover{color:#fff;}
+	.dot{
 		padding-right:0;
 		text-align:right;
 	}
@@ -681,6 +690,7 @@ nav{
 
 
 
+/* - - - - - - - - - - - RESPONSIVE - - - - - - - - - - - */
 
 
 /* - - - MOBILE 992px - - - */
@@ -706,10 +716,10 @@ nav{
 
 /* - - - EMPRESA - - - */
 	#empresa{
+		.container-empresa{padding:0 15px;}
 		.imagenes-empresa {
 			height: auto;
 			width: auto;
-			margin: auto;
 			.cocinero {
 				background: url("mobile_cocinero.png") no-repeat;
 				background-size: 100%;
@@ -759,6 +769,14 @@ nav{
 		}
 	}
 
+
+	#contacto{
+		.formulario{
+			.campo{z-index: 20;}
+		}
+	}
+
+
 /* - - - FIN FOOTER - - - */
 	.footer1 .social{text-align:right;}
 	.footer2{
@@ -775,10 +793,14 @@ nav{
 		}
 		.direcciones h3{margin-top: 0;}
 	}
+	.footer3 .admin{display:none;}
+	.footer3 .dot{text-align:center;padding:0 15px;}
 /* - - - FIN DE FOOTER - - - */
 }
 
 /* - - - FIN DE MOBILE 992px - - - */
+
+
 
 
 
@@ -809,7 +831,7 @@ nav{
 				line-height: 66px;
 				border-bottom: 1px solid #900504;
 				margin: 0;
-				a{font-size: 3.6rem;}
+				font-size: 3.6rem;
 			}
 		}
 	}
@@ -820,8 +842,9 @@ nav{
 		margin-top: 20px;
 		border-radius: 0;
 		border: none !important;
-		&:hover{background:transparent;}
 	}
+	.navbar-toggle:hover{background:transparent;}
+	.navbar-toggle:focus{background:transparent;}
 
 	.navbar-default .navbar-toggle:hover{background-color: transparent;}
 
@@ -839,11 +862,17 @@ nav{
 
 	
 /* - - - HOME - - - */
-	#slider .titulo-home{
-		h1{font-size: 4.7rem; margin: 0;}
-		span img{height: 55px;}
-		h4{font-size: 1.5rem;}
+	#slider{
+		.titulo-home{
+			h1{font-size: 5.3rem; margin: 0;}
+			span{display:none;}
+			h4{font-size: 1.7rem;}
+		}
+		.carousel{
+			.carousel-control.left,.carousel-control.right{display: none;}
+		}
 	}
+
 /* - - - FIN DE HOME - - - */
 
 
@@ -879,9 +908,8 @@ nav{
 
 /* - - - HOME - - - */
 	#slider .titulo-home{
-		h1{font-size: 3.5rem;}
-		span img{height: 40px;}
-		h4{font-size: 1.15rem;}
+		h1{font-size: 3.9rem;}
+		h4{font-size: 1.25rem;}
 	}
 /* - - - FIN DE HOME - - - */
 
@@ -906,13 +934,6 @@ nav{
 			text-align: center;
 			padding: 0;
 			margin-top: 20px;
-		}
-	}
-	
-
-	.footer3{
-		.desarrollo{
-			text-align:center;
 		}
 	}
 /* - - - FIN DE FOOTER - - - */
