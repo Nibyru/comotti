@@ -168,7 +168,7 @@ nav{
 	h1{
 		font-family: $font2;
 		color: #4C4741;
-		font-size: 4.8rem;
+		font-size: 4.5rem;
 		font-weight: bold;
 		text-transform: uppercase;
 		margin:0;
@@ -237,11 +237,14 @@ nav{
 			text-align: center;
 			font-family: $font1;
 			color:#ac100b;
-			font-size:4.2rem;
+			font-size:3.9rem;
 			font-weight: 300;
 			margin-bottom: 45px;
 			b{font-weight:400};
 		}
+		.materias{padding-left:0}
+		.servicios{padding:0;}
+		.clientes{padding-right:0}
 		.img-materias,.img-servicios,.img-clientes{
 			margin: auto;
 			width: 215px;
@@ -264,6 +267,12 @@ nav{
 			background-size: 150%;
 			background-position: center;
 		}
+		p.borde{
+			border-left: 1px solid #dbdbdb;
+			border-right: 1px solid #dbdbdb;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
 		p{
 			font-family: $font1;
 			color:#666666;
@@ -271,6 +280,8 @@ nav{
 			text-transform: uppercase;
 			font-weight: 300;
 			margin-top: 30px;
+			padding-top: 15px;
+			padding-bottom: 15px;
 			b{font-weight:400;}
 		}
 	}
@@ -319,29 +330,32 @@ nav{
 				overflow: hidden;
 				img{
 					width: auto;
-					height: 100%;
+					height: 130px;
 				}
 			}
 			.detalles{
-				background:#F9F9F9;
-				padding-bottom:10px;
+				background: #F9F9F9;
+				height: 170px;
 				h3{
 					font-family: $font3;
 					color: #A41712;
 					text-transform: uppercase;
 					font-size: 1.6rem;
-					margin:0;
-					padding:20px 0;
+					margin: 0;
+					padding-top: 15px;
+					height: 60px;
 				}
 				p{
 					font-size: 1.2rem;
 					text-align: justify;
 					color: #666;
 					font-family: $font1;
+					height: 35px;
+					margin: 0;
 				}
 				hr{
-					border-top:1px solid #E0E0E0;
-					margin:15px 0;
+					border-top: 1px solid #E0E0E0;
+					margin: 10px 0;
 				}
 				.datos{
 					padding-bottom:5px;
@@ -363,8 +377,7 @@ nav{
 				background:#F1F1F1;
 				text-align: right;
 				font-family: $font1;
-				padding-top:10px;
-				padding-bottom:10px;
+				padding-top: 8px;
 				p{
 					font-size: 0.9rem;
 					color: #666;
@@ -374,9 +387,8 @@ nav{
 				span{
 					font-family: $font1;
 					font-size: 3rem;
-					color:#A41712;
+					color: #A41712;
 					font-weight: bold;
-					padding-bottom:10px;
 					i{color:#CCC; font-weight:100; font-style:normal;}
 				}
 			}
@@ -668,6 +680,12 @@ nav{
 
 
 
+
+
+
+
+
+
 /* - - - - - - - - - - - RESPONSIVE - - - - - - - - - - - */
 
 
@@ -675,6 +693,7 @@ nav{
 
 @media only screen and (max-width: 992px) {
 
+	nav ul li{ margin: 0 0 0 17px; }
 
 	#pastas-pizzas-postres{
 		background:-webkit-linear-gradient(top, #fff 15%, #f7f7f7 15%);
@@ -720,25 +739,24 @@ nav{
 			.globos{display:none;}
 		}
 		.diferencias{
-			background:-webkit-linear-gradient(top, #fff 20%, #f7f7f7 20%);
-			background:-moz-linear-gradient(top, #fff 20%, #f7f7f7 20%);
-			p{font-size: 2rem;}
+			background:-webkit-linear-gradient(top, #fff 17%, #f7f7f7 17%);
+			background:-moz-linear-gradient(top, #fff 17%, #f7f7f7 17%);
+			padding-bottom:40px;
+			h2{font-size:3.2rem; margin:25px 0;}
+			.materias,.servicios,.clientes{padding:0 15px;}
+			p{
+				font-size: 1.7rem;
+				padding: 0;
+				margin: 5px 0 40px 0;
+			}
+			p.borde{border:none;}
 		}
 	}
 
 
 	#productos{
-		.fitros-productos{
-			.filtro {margin-bottom:20px;}
-		}
-		.lista-productos{
-			li{
-				.img-producto {
-					height:auto;
-					img{width:100%; height:auto;}
-				}
-			}
-		}
+		.fitros-productos .filtro {margin-bottom:20px;}
+		.lista-productos li .img-producto img{width:100%; height:auto;}
 	}
 
 
@@ -815,10 +833,8 @@ nav{
 		border-radius: 0;
 		border: none !important;
 	}
-	.navbar-toggle:hover{background:transparent;}
-	.navbar-toggle:focus{background:transparent;}
-
 	.navbar-default .navbar-toggle:hover{background-color: transparent;}
+	.navbar-default .navbar-toggle:focus{background-color: transparent;}
 
 	.navbar-toggle .icon-bar {
 		display: block;
@@ -855,6 +871,7 @@ nav{
 			}
 		}
 	}
+
 	
 	.footer1 .social .botones{display:none;}
 	.footer2 .container-footer{margin:0;}
@@ -868,7 +885,6 @@ nav{
 /* - - - MOBILE 480px - - - */
 
 @media only screen and (max-width: 480px) {
-
 
 	.footer1 .social{text-align:right;}
 	
@@ -895,6 +911,77 @@ nav{
 }
 
 /* - - - FIN DE MOBILE 480px - - - */
+
+
+@media only screen and (max-width: 479px) {
+
+	#empresa{
+		.imagenes-empresa{
+			height: 400px;
+			.cocinero {
+				background: url("mobile_cocinero.png") no-repeat;
+				background-size: 100%;
+				height: 160px;
+				width: 260px;
+			}	
+			.bg-letras {
+				background: url("mobile_bg_letras.png") no-repeat;
+				background-size: 100%;
+				height: 280px;
+				width: 260px;
+			}
+			.letras {
+				background: url("mobile_letras.png") no-repeat;
+				background-size: 90%;
+				background-position: top center;
+				height: 260px;
+				width: 100%;
+				margin: auto;
+				top: 10px;
+			}
+		}
+	}
+	  
+
+	#productos{
+		li.product{
+			width: 80%;
+			margin-left: 10%;	
+			.detalles{
+				height: auto;
+				padding-bottom: 10px;
+				h3 {height: auto; padding: 15px 0;}
+				p {height: auto; font-size: 1.25rem;}
+				hr {margin: 15px 0;}
+			}
+		}
+	}
+
+	#contacto{
+		.formulario{
+			width: 100%;
+			margin-left: 0;
+		}
+	}
+
+	footer{
+		.footer2{
+			.divisor{display:none;}
+			.maq-mobile{width:100%;margin-bottom: 15px;}
+			.direcciones{
+				margin-top: 20px;
+				hr{display:none;}
+				h3{margin-top:20px;}
+				p{margin-bottom:15px;}
+			}
+			.delivery-data{margin-top: 0px;}
+		}
+
+	}
+
+}
+
+
 
 .luces {
     -webkit-animation: intermitente 1s linear infinite;
