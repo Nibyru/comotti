@@ -18,6 +18,11 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav pull-right">
               <div class="menu">
+                <%= link_to (root_path) do %>
+                  <li class=<%= 'active' if current_page?(action: :index)%> >
+                    Inicio
+                  </li>
+                <% end %>
                 <%= link_to (empresa_path) do %>
                   <li class=<%= 'active' if current_page?(action: :empresa)%> >
                     La empresa
@@ -46,24 +51,3 @@
     </div><!-- /.container-fluid -->
   </nav>
 <% end %>
-
-
-
-<!--
-<ul class="nav navbar-nav pull-right">
-  <div class="menu">
-    <li class=<%= 'active' if current_page?(action: :empresa)%> >
-      <%= link_to 'la empresa', empresa_path %>
-    </li>
-    <li class=<%= 'active' if current_page?(action: :products)%> >
-      <%= link_to 'productos', products_path %>
-    </li>
-    <li class=<%= 'active' if current_page?(action: :promos)%> >
-      <%= link_to 'promociones', promos_path %>
-    </li>
-    <li class=<%= 'active' if current_page?(action: :contact)%> >
-      <%= link_to 'contacto', contact_path %>
-    </li>
-  </div>
-</ul>
--->
