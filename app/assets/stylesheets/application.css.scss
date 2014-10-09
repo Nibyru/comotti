@@ -115,10 +115,11 @@ nav{
 
 
 #product-examples{
-	background:-webkit-linear-gradient(top, #fff 38%, #f7f7f7 20%);
-	background:-moz-linear-gradient(top, #fff 38%, #f7f7f7 20%);
+	background:-webkit-linear-gradient(top, #fff 35%, #f7f7f7 35%);
+	background:-moz-linear-gradient(top, #fff 35%, #f7f7f7 35%);
 	text-align:center;
-	height: 415px;
+	height: auto;
+	padding-bottom: 50px;
 	h2{
 		font-family: $font2;
 		font-weight: lighter;
@@ -140,16 +141,17 @@ nav{
 		position: relative;
 		top: -35px;
 		height: 38px;
+		width: 211px;
 		background: url("ver_todo.png") no-repeat;
 		background-position: top;
-		background-size: 85%;
+		background-size: 100%;
 		&:hover{background-position:bottom;}
 		p{
 			font-family: $font1;
 			text-transform: uppercase;
 			color: #fff;
 			line-height: 40px;
-			font-size: 1.3rem;
+			font-size: 1.2rem;
 		}
 	}
 }
@@ -450,9 +452,12 @@ nav{
 					margin-bottom: 10px;
 					text-align: center;
 					height:67px;
+					width: 236px;
 					background:url('precio.png') no-repeat;
+					background-size:100%;
 					background-position:center;
 					font-family: $font1;
+					line-height: 67px;
 					font-size:4.8rem;
 					color:#fff;
 					b{font-weight:100; font-style:normal;}
@@ -695,7 +700,7 @@ nav{
 
 	nav ul li{ margin: 0 0 0 17px; }
 
-	#pastas-pizzas-postres{
+	#product-examples{
 		background:-webkit-linear-gradient(top, #fff 15%, #f7f7f7 15%);
 		background:-moz-linear-gradient(top, #fff 15%, #f7f7f7 15%);
 	}
@@ -757,6 +762,14 @@ nav{
 	#productos{
 		.fitros-productos .filtro {margin-bottom:20px;}
 		.lista-productos li .img-producto img{width:100%; height:auto;}
+	}
+
+
+	#promo{
+		.precio-promo{
+			width: 180px;
+			font-size:3.5rem;
+		}
 	}
 
 
@@ -957,6 +970,13 @@ nav{
 		}
 	}
 
+	#promo{
+		.promocion {
+			width: 100%;
+			margin-left: 0;
+		}
+	}
+	
 	#contacto{
 		.formulario{
 			width: 100%;
