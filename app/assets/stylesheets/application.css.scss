@@ -406,20 +406,20 @@ nav{
 /* - - - PROMOCIONES - - - */
 
 #promo{
-	margin-bottom:100px;
+	margin-bottom:70px;
 	text-transform:uppercase;
 	.lista-promociones{
-		margin-top:20px;
+		margin-top:50px;
 		padding:0;
 		li{
-			margin-top: 30px;
+			margin: 20px 0;
 			text-align: center;
 			.promocion{
 				background:#F7F7F7;
 				padding:0;
 				padding-bottom:15px;
 				.img-promo{
-					height: 190px;
+					height: 180px;
 					width: 100%;
 					overflow: hidden;
 					img{
@@ -427,11 +427,12 @@ nav{
 						height: auto;
 					}
 				}
+				.promo-descripcion{height:175px;}
 				h3{
 					font-family: $font2;
 					font-weight: bold;
 					color: #f00600;
-					font-size: 5.2rem;
+					font-size: 5rem;
 					text-align: left;
 					margin-top: 30px;
 				}
@@ -448,7 +449,8 @@ nav{
 					text-align: left;
 				}
 				.precio-promo{
-					margin-top:30px;
+					margin:auto;
+					margin-top:25px;
 					margin-bottom: 10px;
 					text-align: center;
 					height:67px;
@@ -765,11 +767,9 @@ nav{
 	}
 
 
-	#promo{
-		.precio-promo{
-			width: 180px;
-			font-size:3.5rem;
-		}
+	#promo .lista-promociones li .promocion .precio-promo{
+		width: 180px;
+		font-size:3.5rem;
 	}
 
 
@@ -885,6 +885,12 @@ nav{
 		}
 	}
 
+	#promo .lista-promociones li{
+		width: 80%;
+		margin-left: 10%;
+		.promocion .promo-descripcion{height:auto;}
+	}
+
 	
 	.footer1 .social .botones{display:none;}
 	.footer2 .container-footer{margin:0;}
@@ -898,6 +904,8 @@ nav{
 /* - - - MOBILE 480px - - - */
 
 @media only screen and (max-width: 480px) {
+
+	#promo .lista-promociones li .promocion h3 {margin-top: 20px;}
 
 	.footer1 .social{text-align:right;}
 	
@@ -970,11 +978,11 @@ nav{
 		}
 	}
 
-	#promo{
-		.promocion {
-			width: 100%;
-			margin-left: 0;
-		}
+	#promo .lista-promociones li{
+		width: 100%;
+		margin-left: 0;
+		.promocion .img-promo {height: 140px;}
+		.promocion h3 {font-size: 4.8rem;}
 	}
 	
 	#contacto{
