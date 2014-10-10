@@ -144,7 +144,7 @@ nav{
 		width: 211px;
 		background: url("ver_todo.png") no-repeat;
 		background-position: top;
-		background-size: 85%;
+		background-size: 100%%;
 		z-index: 10;
 		&:hover{background-position:bottom;}
 		p{
@@ -1059,7 +1059,7 @@ nav{
 }
 
 .category-examples{
-	.carousel .item {-webkit-transition: opacity 1s; -moz-transition: opacity 1s; -ms-transition: opacity 1s; -o-transition: opacity 1s; transition: opacity 1s;}
+	.carousel .item {-webkit-transition: opacity 2s; -moz-transition: opacity 2s; -ms-transition: opacity 2s; -o-transition: opacity 2s; transition: opacity 2s;}
 	.carousel .active.left {opacity:0;z-index:2;}
 	.carousel .next {opacity:1;z-index:1;}
 }

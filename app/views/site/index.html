@@ -3,31 +3,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 col-md-12">
-					<div id="carousel" class="carousel slide" data-ride="carousel">
-						<!-- Indicators -->
-						<ol class="carousel-indicators">
-							<% @sliders.each_with_index do |slider, index|%>
-								<li data-target="#carousel" data-slide-to="<%= index %>" class=<%= 'active' if index == 0 %>></li>
-							<% end %>
-						</ol>
 
-					  <!-- Wrapper for slides -->
-					  <div class="carousel-inner">
-							<% @sliders.each_with_index do |slider, index|%>
-						  	  	<div class="item <%= 'active' if index == 0 %>">
-						  	  	  <%= image_tag(slider.banner.url) %>
-						  	  	</div>
-					  	    <% end %>
-					  </div>
-
-					  <!-- Controls -->
-					  <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
-					  	<%= image_tag ('flecha_slider_izq.png') %>
-					  </a>
-					  <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
-					  	<%= image_tag ('flecha_slider_der.png') %>
-					  </a>
-					</div>
 
 				</div>
 			</div>
@@ -41,7 +17,7 @@
 					<% @categories.each_with_index do |category, index| %>
 						<div class="col-lg-4 col-md-4 category-examples">
 							<h2><%= category.title %></h2>
-							<div id='<%= "carousel#{index+1}" %>' class='<%= "carousel#{index+1}" %> slide' data-ride="carousel">
+							<div id='<%= "carousel#{index+1}" %>' class='carousel slide' data-ride="carousel">
 							    <div class="carousel-inner">
 							    	<% 3.times do |t| %>
 								  	  	<div class="item <%= 'active' if t == 0 %>">
