@@ -1,8 +1,22 @@
 var ready;
 ready = function() {
-
   //category examples
   $('#carousel1, #carousel2, #carousel3').carousel({ interval: 6000});
+  //home slider
+  $(function() {
+    $('#slides').slidesjs({
+      play: {
+            active: false,
+            effect: "slide",
+            interval: 5000,
+            auto: true,
+            pauseOnHover: true
+      },
+      width: 940,
+      height: 528,
+      navigation: false
+    });
+  });
   // map
   if ($('#map').length > 0){
     var map = L.mapbox.map('map', 'sarriagada.j4p9400k', {
@@ -14,20 +28,6 @@ ready = function() {
       iconSize: [55, 66],
       iconAnchor: [27, 65]
     });
-
-    function getUrlParameter(sParam)
-    {
-      var sPageURL = window.location.search.substring(1);
-      var sURLVariables = sPageURL.split('&');
-      for (var i = 0; i < sURLVariables.length; i++) 
-      {
-        var sParameterName = sURLVariables[i].split('=');
-        if (sParameterName[0] == sParam) 
-        {
-          return sParameterName[1];
-        }
-      }
-    }
 
     var points = [{
       direction: 'SANTA FE 909',
@@ -107,8 +107,21 @@ ready = function() {
       });
   });
 
+  var getUrlParameter = function(sParam){
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) 
+    {
+      var sParameterName = sURLVariables[i].split('=');
+      if (sParameterName[0] == sParam) 
+      {
+        return sParameterName[1];
+      }
+    }
+  }
+
   var categoryParams = getUrlParameter('category');
-  if (categoryParams.length > 0){
+  if (categoryParams){
     console.log('ok');
     $('.fitros-productos a').removeClass('active');
     $('.fitros-productos a[data-group=' + categoryParams +']').addClass('active');

@@ -8,4 +8,5 @@
 //= require date
 //= require site
 //= require social-btn
+//= require jquery.slides.min
 
