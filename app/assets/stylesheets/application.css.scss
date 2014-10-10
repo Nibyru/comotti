@@ -76,7 +76,7 @@ nav{
 /* - - - HOME - - - */
 #slider{
 	width:100%;
-	min-height:492px;
+	height:492px;
 	background: url('textura_slider.jpg');
 	text-align:center;
 	padding-top:55px;
@@ -95,7 +95,7 @@ nav{
 			height: 98px;
 			display: inline-block;
 			position: absolute;
-			top: 0px;
+			top: 10%;
 		}
 		.slidesjs-previous{
 			text-align:left;
@@ -113,9 +113,10 @@ nav{
 		.slidesjs-control img{
 			height: 100%!important;
 			width: auto!important;
+			max-width: 100%!important;
 		}
 		.slidesjs-pagination {
-			bottom: 0;
+			bottom: -60px;
 			position: absolute;
 			width: 300px;
 			left: 45%;
@@ -930,6 +931,7 @@ nav{
 /* - - - MOBILE 480px - - - */
 
 @media only screen and (max-width: 480px) {
+	.slidesjs-previous,.slidesjs-next, .slidesjs-pagination{ display: none!important; }
 
 	#productos{
 		li.product{
@@ -975,7 +977,7 @@ nav{
 
 
 @media only screen and (max-width: 479px) {
-
+	.slidesjs-previous,.slidesjs-next, .slidesjs-pagination{ display: none!important; }
 	#empresa{
 		.imagenes-empresa{
 			height: 400px;
