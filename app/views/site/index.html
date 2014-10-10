@@ -14,10 +14,10 @@
 					  <!-- Wrapper for slides -->
 					  <div class="carousel-inner">
 							<% @sliders.each_with_index do |slider, index|%>
-				  	  	<div class="item <%= 'active' if index == 0 %>">
-				  	  	  <%= image_tag(slider.banner.url) %>
-				  	  	</div>
-			  	    <% end %>
+						  	  	<div class="item <%= 'active' if index == 0 %>">
+						  	  	  <%= image_tag(slider.banner.url) %>
+						  	  	</div>
+					  	    <% end %>
 					  </div>
 
 					  <!-- Controls -->
@@ -38,14 +38,25 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
-					<% @categories.each do |category| %>
-						<div class="col-lg-4 col-md-4">
+					<% @categories.each_with_index do |category, index| %>
+						<div class="col-lg-4 col-md-4 category-examples">
 							<h2><%= category.title %></h2>
-							<div class="img-product" style="background-image: url('<%= photo_example(category) %>')"></div>
+							<div id='<%= "carousel#{index+1}" %>' class='<%= "carousel#{index+1}" %> slide' data-ride="carousel">
+							    <div class="carousel-inner">
+							    	<% 3.times do |t| %>
+								  	  	<div class="item <%= 'active' if t == 0 %>">
+								  	  	  <%= image_tag(photo_example(category), class: 'img-product') %>
+								  	  	</div>
+							  	  	<% end %>
+							    </div>
+							</div>
 							<div class="ver-mas">
-								<a><p>Ver todas <b>las <%= category.title %></b></p></a>
+								<%= link_to products_path(category: category.title) do %>
+									<p>Ver todas <b>las <%= category.title %></b></p>
+								<% end %>
 							</div>
 						</div>
+
 					<% end %>
 				</div>
 			</div>

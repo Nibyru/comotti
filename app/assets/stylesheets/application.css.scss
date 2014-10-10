@@ -144,7 +144,8 @@ nav{
 		width: 211px;
 		background: url("ver_todo.png") no-repeat;
 		background-position: top;
-		background-size: 100%;
+		background-size: 85%;
+		z-index: 10;
 		&:hover{background-position:bottom;}
 		p{
 			font-family: $font1;
@@ -1053,4 +1054,10 @@ nav{
     	filter: url(grayscale.svg);
     	filter: gray;
     }
+}
+
+.category-examples{
+	.carousel .item {-webkit-transition: opacity 1s; -moz-transition: opacity 1s; -ms-transition: opacity 1s; -o-transition: opacity 1s; transition: opacity 1s;}
+	.carousel .active.left {opacity:0;z-index:2;}
+	.carousel .next {opacity:1;z-index:1;}
 }
