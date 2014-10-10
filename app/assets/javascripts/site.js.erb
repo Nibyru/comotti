@@ -3,20 +3,19 @@ ready = function() {
   //category examples
   $('#carousel1, #carousel2, #carousel3').carousel({ interval: 6000});
   //home slider
-  $(function() {
+  if ($('#slides img').length > 1){
     $('#slides').slidesjs({
       play: {
-            active: false,
-            effect: "slide",
-            interval: 5000,
-            auto: true,
-            pauseOnHover: true
+        effect: "slide",
+        interval: 5000,
+        auto: true,
+        pauseOnHover: true
       },
-      width: 300,
-      height: 500,
       navigation: false
     });
-  });
+  }else{
+    $('a.slidesjs-navigation').hide();
+  }
   // map
   if ($('#map').length > 0){
     var map = L.mapbox.map('map', 'sarriagada.j4p9400k', {
