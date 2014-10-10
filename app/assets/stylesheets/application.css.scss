@@ -82,32 +82,48 @@ nav{
 	padding-top:55px;
 	margin-bottom:180px;
 	margin-top: -10px;
-	.carousel{
-		margin-top: 30px;
-		.carousel-control.left,.carousel-control.right{
+	#slides{
+		width: 500px;
+		height: 500px;
+		margin: auto;
+		.slidesjs-previous,.slidesjs-next{
 			background:transparent;
 			opacity: 1;
 			height: 90px;
 			margin-top: 100px;
+			width: 51px;
+			height: 98px;
+			display: inline-block;
+			position: absolute;
+			top: 0px;
 		}
-		.carousel-control.left{text-align:left;}
-		.carousel-control.right{text-align:right;}
-		.carousel-indicators{bottom: -90px;}
-		.carousel-indicators li{
-			background: #DADADA;
-			border:none;
-			width: 13px;
-			height: 13px;
-			margin: 3px;
-			border-radius:13px;
+		.slidesjs-previous{
+			text-align:left;
+			left: -10px;
+			background: url('flecha_slider_izq.png');
 		}
-		.carousel-indicators .active{background: #B01B15;}
-		.carousel-inner{
-			height: auto;
-			img{
-				height:450px;
-				width:auto;
-				margin:auto;
+		.slidesjs-next{
+			text-align:right;
+			right: -10px;
+			background: url('flecha_slider_der.png');
+		}
+		.slidesjs-pagination {
+			bottom: 13px;
+			position: absolute;
+			width: 300px;
+			left: 45%;
+			li a {
+			  display: block;
+			  padding-top: 13px;
+			  float: left;
+			  overflow: hidden;
+				background: #DADADA;
+				border:none;
+				width: 13px;
+				height: 13px;
+				margin: 3px;
+				border-radius:13px;
+				&.active{background: #B01B15;}
 			}
 		}
 	}
@@ -908,6 +924,20 @@ nav{
 
 @media only screen and (max-width: 480px) {
 
+	#productos{
+		li.product{
+			width: 80%;
+			margin-left: 10%;	
+			.detalles{
+				height: auto;
+				padding-bottom: 10px;
+				h3 {height: auto; padding: 15px 0;}
+				p {height: auto; font-size: 1.25rem;}
+				hr {margin: 15px 0;}
+			}
+		}
+	}
+
 	#promo .lista-promociones li .promocion h3 {margin-top: 20px;}
 
 	.footer1 .social{text-align:right;}
@@ -966,20 +996,6 @@ nav{
 		}
 	}
 	  
-
-	#productos{
-		li.product{
-			width: 80%;
-			margin-left: 10%;	
-			.detalles{
-				height: auto;
-				padding-bottom: 10px;
-				h3 {height: auto; padding: 15px 0;}
-				p {height: auto; font-size: 1.25rem;}
-				hr {margin: 15px 0;}
-			}
-		}
-	}
 
 	#promo .lista-promociones li{
 		width: 100%;
