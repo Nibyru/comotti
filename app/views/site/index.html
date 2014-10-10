@@ -4,10 +4,9 @@
 			<div class="row">
 				<div class="col-lg-12 col-md-12">
 					<div id="slides">
-					    <%= image_tag(photo_example(Category.first), class: '') %>
-					    <%= image_tag(photo_example(Category.first), class: '') %>
-					    <%= image_tag(photo_example(Category.first), class: '') %>
-					    <%= image_tag(photo_example(Category.first), class: '') %>
+							<% @sliders.each do |slider|%>
+					    	<%= image_tag(slider.banner.url) %>
+					    <% end %>
 					    <a href="#" class="slidesjs-previous slidesjs-navigation"></a>
 					    <a href="#" class="slidesjs-next slidesjs-navigation"></a>
 					  </div>
