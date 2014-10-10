@@ -83,8 +83,8 @@ nav{
 	margin-bottom:180px;
 	margin-top: -10px;
 	#slides{
-		width: 500px;
-		height: 500px;
+		max-width: 900px;
+		height: 500px!important;
 		margin: auto;
 		.slidesjs-previous,.slidesjs-next{
 			background:transparent;
@@ -107,8 +107,15 @@ nav{
 			right: -10px;
 			background: url('flecha_slider_der.png');
 		}
+		.slidesjs-container, .slidesjs-control{
+			max-height: 100%!important;
+		}
+		.slidesjs-control img{
+			height: 100%!important;
+			width: auto!important;
+		}
 		.slidesjs-pagination {
-			bottom: 13px;
+			bottom: 0;
 			position: absolute;
 			width: 300px;
 			left: 45%;
