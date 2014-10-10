@@ -15,6 +15,20 @@ ready = function() {
       iconAnchor: [27, 65]
     });
 
+    function getUrlParameter(sParam)
+    {
+      var sPageURL = window.location.search.substring(1);
+      var sURLVariables = sPageURL.split('&');
+      for (var i = 0; i < sURLVariables.length; i++) 
+      {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam) 
+        {
+          return sParameterName[1];
+        }
+      }
+    }
+
     var points = [{
       direction: 'SANTA FE 909',
       image: '<%= asset_path("category-example.jpg") %>',
@@ -92,6 +106,21 @@ ready = function() {
         return el
       });
   });
+
+  var categoryParams = getUrlParameter('category');
+  if (categoryParams.length > 0){
+    console.log('ok');
+    $('.fitros-productos a').removeClass('active');
+    $('.fitros-productos a[data-group=' + categoryParams +']').addClass('active');
+    var groupName = categoryParams;
+    $grid.shuffle('shuffle', function($el, shuffle) {
+      var el;
+      if ($el.data('groups').indexOf(groupName) > -1){
+        el = $el;
+      }
+      return el
+    });
+  }
 };
 
 $(document).ready(ready);
