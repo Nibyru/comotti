@@ -733,6 +733,16 @@ nav{
 
 	nav ul li{ margin: 0 0 0 17px; }
 
+	#slider{
+		height:400px;
+		#slides{
+			height:400px !important;
+			.slidesjs-pagination {
+				bottom: -40px;
+			}	
+		}
+	}
+
 	#product-examples{
 		background:-webkit-linear-gradient(top, #fff 15%, #f7f7f7 15%);
 		background:-moz-linear-gradient(top, #fff 15%, #f7f7f7 15%);
@@ -894,10 +904,13 @@ nav{
 
 	
 	#slider{
-		.carousel{
-			.carousel-control.left,.carousel-control.right{display: none;}
+		height: 350px;
+		#slides{
+			height: 100% !important;
+			.slidesjs-previous,.slidesjs-next,.slidesjs-pagination{display:none;}
 		}
 	}
+	
 
 	#mapa-container{
 		.opciones-mapa{
@@ -938,7 +951,7 @@ nav{
 	#slider{
 		height: 280px!important;
 		margin-bottom: 30px!important;
-		div#slides{
+		#slides{
 			max-width: 480px!important;
 			height: 200px!important;
 			margin: auto;
