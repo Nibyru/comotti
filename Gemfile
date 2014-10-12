@@ -28,8 +28,5 @@ group :development do
 end
 
 group :production do
-  #gem 'pg'
-  gem 'sqlite3'
-  gem 'better_errors'
-  gem 'binding_of_caller'
+  gem 'pg'
 end
