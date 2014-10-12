@@ -20,7 +20,7 @@ Comotti::Application.configure do
   # config.action_dispatch.rack_cache = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this).
-  config.serve_static_assets = true
+  config.serve_static_assets = false
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
@@ -43,7 +43,7 @@ Comotti::Application.configure do
   # config.force_ssl = true
 
   # Set to :debug to see everything in the log.
-  config.log_level = :debug
+  config.log_level = :info
 
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
@@ -85,8 +85,8 @@ Comotti::Application.configure do
     address:              'smtp.sendgrid.net',
     port:                 587,
     domain:               'gmail.com',
-    user_name:            'sarriagada',
-    password:             'meisner1051',
+    user_name:            '',
+    password:             '',
     authentication:       'plain',
     enable_starttls_auto: true  }
 end
