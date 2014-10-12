@@ -6,7 +6,7 @@ class MessagesController < ApplicationController
       if @message.save
         Contact.admin_email(@message).deliver
         Contact.user_email(@message).deliver
-        format.html { redirect_to contact_path, notice: 'Gracias por ponerse en contacto con nosotros.' }
+        format.html { redirect_to root_path, notice: 'Gracias por ponerse en contacto con nosotros.' }
       else
         format.html { render controller: 'site', action: 'contacto' }
       end
