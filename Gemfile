@@ -13,6 +13,7 @@ gem 'carrierwave-dropbox'
 gem 'devise'
 gem 'inherited_resources'
 gem 'rails_admin'
+gem 'fog'
 
 group :doc do
   gem 'sdoc', require: false
