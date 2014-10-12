@@ -1,4 +1,5 @@
 class Contact < ActionMailer::Base
+  default from: "dotestudiografico@gmail.com"
 
   def admin_email(message)
     @message = message
