@@ -1,12 +1,11 @@
 Comotti::Application.routes.draw do
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  devise_for :users, path: "users", path_names: {
+  devise_for :users, skip: [:registrations] , path: "users", path_names: {
     sign_in: 'login',
     sign_out: 'logout',
     password: 'secret',
-    registration: 'register',
-    sign_up: 'sign_up'
+    registration: 'register'
   }, controllers: { sessions: "sessions", registrations: "registrations" }
 
   get 'empresa' => 'site#empresa', as: :empresa

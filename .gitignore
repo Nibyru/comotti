@@ -17,3 +17,5 @@
 
 #other files
 /public
+/config/initializers/carrierwave.rb
+/config/database.yml
