@@ -85,8 +85,8 @@ Comotti::Application.configure do
     address:              'smtp.sendgrid.net',
     port:                 587,
     domain:               'gmail.com',
-    user_name:            '',
-    password:             '',
+    user_name:            'sarriagada',
+    password:             'meisner1051',
     authentication:       'plain',
     enable_starttls_auto: true  }
 end
