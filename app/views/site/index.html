@@ -23,13 +23,13 @@
 						<div class="col-lg-4 col-md-4 category-examples">
 							<h2><%= category.title %></h2>
 							<div id='<%= "carousel#{index+1}" %>' class='carousel slide' data-ride="carousel">
-							    <div class="carousel-inner">
-							    	<% 3.times do |t| %>
-								  	  	<div class="item <%= 'active' if t == 0 %>">
-								  	  	  <%= image_tag(photo_example(category), class: 'img-product') %>
-								  	  	</div>
-							  	  	<% end %>
-							    </div>
+						    <div class="carousel-inner">
+						    	<% 3.times do |t| %>
+						  	  	<div class="item <%= 'active' if t == 0 %>">
+						  	  	  <%= image_tag(photo_example(category), class: 'img-product') %>
+						  	  	</div>
+					  	  	<% end %>
+						    </div>
 							</div>
 							<div class="ver-mas">
 								<%= link_to products_path(category: category.title) do %>
@@ -37,7 +37,6 @@
 								<% end %>
 							</div>
 						</div>
-
 					<% end %>
 				</div>
 			</div>

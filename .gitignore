@@ -17,5 +17,3 @@
 
 #other files
 /public
-/config/initializers/carrierwave.rb
-/config/environments/production.rb

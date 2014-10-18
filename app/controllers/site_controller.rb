@@ -1,5 +1,4 @@
 class SiteController < ApplicationController
-  has_mobile_fu
 
   def index
     @sliders = Slider.where(show_slider: true).sort_by(&:position).reverse
