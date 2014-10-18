@@ -19,18 +19,13 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
-					<% @categories.each_with_index do |category, index| %>
+					<% @categories.each do |category| %>
 						<div class="col-lg-4 col-md-4">
 							<h2><%= category.title %></h2>
 							<div class='carousel-category-example'>
 					    	<% 3.times do |t| %>
-					  	  	<!-- <div class="item <%= 'active' if t == 0 %>">
-					  	  	  <%= image_tag(photo_example(category), class: 'img-product') %>
-					  	  	</div> -->
+							  	<%= image_tag(photo_example(category), class: 'img-product') %>
 				  	  	<% end %>
-							  <%= image_tag('02.jpg', class: 'img-product') %>
-							  <%= image_tag('03.jpg', class: 'img-product') %>
-							  <%= image_tag('category-example.jpg', class: 'img-product') %>
 						  </div>
 							<div class="ver-mas">
 								<%= link_to products_path(category: category.title) do %>
