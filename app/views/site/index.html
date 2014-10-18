@@ -5,7 +5,7 @@
 				<div class="col-lg-12 col-md-12">
 					<div id="slides">
 							<% @sliders.each do |slider|%>
-					    	<%= is_mobile_device? ? image_tag(slider.mobile_banner.url) : image_tag(slider.banner.url) %>
+					    	<%= is_mobile? ? image_tag(slider.mobile_banner.url) : image_tag(slider.banner.url) %>
 					    <% end %>
 					    <a href="#" class="slidesjs-previous slidesjs-navigation"></a>
 					    <a href="#" class="slidesjs-next slidesjs-navigation"></a>
