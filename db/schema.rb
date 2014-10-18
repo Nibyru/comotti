@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141012182950) do
+ActiveRecord::Schema.define(version: 20141018144918) do
 
   create_table "categories", force: true do |t|
     t.string   "title"
@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(version: 20141012182950) do
     t.datetime "updated_at"
     t.string   "banner"
     t.boolean  "show_slider"
+    t.integer  "position"
   end
 
   create_table "users", force: true do |t|

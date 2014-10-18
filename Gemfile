@@ -14,6 +14,7 @@ gem 'devise'
 gem 'inherited_resources'
 gem 'rails_admin'
 gem 'fog'
+gem 'mobile-fu'
 
 group :doc do
   gem 'sdoc', require: false

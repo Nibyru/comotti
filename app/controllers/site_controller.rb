@@ -1,13 +1,8 @@
 class SiteController < ApplicationController
+  has_mobile_fu
+
   def index
-    @sliders = []
-    show_slider = Slider.where(show_slider: true)
-    show_promo = Promo.where(show_slider: true)
-    show_product = Product.where(show_slider: true)
-    @sliders << show_slider.all if show_slider.any?
-    @sliders << show_promo.all if show_promo.any?
-    @sliders << show_product.all if show_product.any?
-    @sliders.flatten!
+    @sliders = Slider.where(show_slider: true).sort_by(&:position).reverse
     @categories = Category.all
   end
 
