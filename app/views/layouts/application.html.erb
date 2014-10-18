@@ -23,7 +23,10 @@
   <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/alerts' %>
-    <%= yield %>
+    <div class='content'>
+      <div class='loading'><%= image_tag 'carga.gif' %></div>
+      <%= yield %>
+    </div>
     <%= render 'shared/footer' %>
   </body>
 </html>

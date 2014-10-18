@@ -16,7 +16,18 @@ $font3: 'Roboto Slab', serif;
 
 a{cursor:pointer;}
 
-
+.loading {
+	display: none;
+	padding: 20px 30px;
+	border-radius: 5px;
+	width: auto;
+	text-align: center;
+	background: rgba(255, 255, 255, 0.85);
+	position: fixed;
+	z-index: 9999;
+	top: 48%;
+	left: 48%;
+}
 
 .pad-left{
 	padding-left:0;

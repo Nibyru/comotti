@@ -1,5 +1,11 @@
 var ready;
 ready = function() {
+  $(document).on("page:fetch", function() {
+    $('.loading').show();
+  });
+  $(document).on("page:receive", function() {
+    $('.loading').hide();
+  });
   /**
    * jQuery.browser.mobile (http://detectmobilebrowser.com/)
    *
