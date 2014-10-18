@@ -155,6 +155,11 @@ nav{
 		font-size: 5rem;
 		color: #990e09;
 	}
+	.slidesjs-container, .slidesjs-control{
+		width: 215px!important;
+		height: 215px!important;
+		margin: auto!important;
+	}
 	.img-product{
 		margin: auto;
 		width: 215px;
@@ -335,7 +340,7 @@ nav{
 		border-bottom:1px dotted #B9B9B9;
 		text-align:center;
 		.filtro{
-			height:34px;
+			height:33px;
 			background:url('btn_filtro.png') no-repeat;
 			background-position:top;
 			color: #AE110B;
@@ -1124,10 +1129,4 @@ nav{
     	filter: url(grayscale.svg);
     	filter: gray;
     }
-}
-
-.category-examples{
-	.carousel .item {-webkit-transition: opacity 2s; -moz-transition: opacity 2s; -ms-transition: opacity 2s; -o-transition: opacity 2s; transition: opacity 2s;}
-	.carousel .active.left {opacity:0;z-index:2;}
-	.carousel .next {opacity:1;z-index:1;}
 }
