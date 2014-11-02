@@ -9,7 +9,7 @@ class SiteController < ApplicationController
   end
 
   def products
-    @products = Product.all
+    @products = Product.all.order(:title)
     @categories = Category.all
   end
 

@@ -9,6 +9,16 @@ $font3: 'Roboto Slab', serif;
 	text-decoration:none !important;
 	list-style:none;
 }
+
+html{
+	position: relative;
+    min-height: 100%;
+}
+
+body{
+	margin-bottom: 468px;
+}
+
 .row{
 	margin:0;
 }
@@ -395,7 +405,6 @@ nav{
 				}
 				p{
 					font-size: 1.2rem;
-					text-align: justify;
 					color: #666;
 					font-family: $font1;
 					height: 35px;
@@ -630,6 +639,11 @@ nav{
 
 
 /* - - - FOOTER - - - */
+footer{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
 .footer1{
 	background:#212121;
 	height:108px;

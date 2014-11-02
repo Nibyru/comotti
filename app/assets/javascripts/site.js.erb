@@ -156,10 +156,9 @@ ready = function() {
 
   var categoryParams = getUrlParameter('category');
   if (categoryParams){
-    console.log('ok');
+    var groupName = categoryParams.replace(/\+/g, ' ');
     $('.fitros-productos a').removeClass('active');
-    $('.fitros-productos a[data-group=' + categoryParams +']').addClass('active');
-    var groupName = categoryParams;
+    $('.fitros-productos a[data-group="' + groupName +'"]').addClass('active');
     $grid.shuffle('shuffle', function($el, shuffle) {
       var el;
       if ($el.data('groups').indexOf(groupName) > -1){
