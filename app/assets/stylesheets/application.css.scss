@@ -983,15 +983,19 @@ footer{
 		left: 0;
 	}
 	#slider{
-		height: 280px!important;
 		margin-bottom: 30px!important;
+		height: auto!important;
 		#slides{
-			max-width: 480px!important;
-			height: 200px!important;
+			height: auto!important;
 			margin: auto;
-			img{
-				max-width: 475px!important;
-				max-height: 200px!important;
+			width: 420px!important;
+			.slidesjs-control, .slidesjs-container{
+				height: 420px!important;
+				width: 420px!important;
+				img{
+					width: 420px!important;
+					height: auto!important;
+				}
 			}
 		}
 	}
@@ -1042,16 +1046,9 @@ footer{
 
 @media only screen and (max-width: 479px) {
 	#slider{
-		height: 280px!important;
 		margin-bottom: 30px!important;
 		div#slides{
-			max-width: 479px!important;
-			height: 200px!important;
 			margin: auto;
-			img{
-				max-width: 470px!important;
-				max-height: 200px!important;
-			}
 		}
 	}
 	.slidesjs-previous,.slidesjs-next, .slidesjs-pagination{ display: none!important; }
