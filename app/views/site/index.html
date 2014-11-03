@@ -24,7 +24,7 @@
 							<h2><%= category.title %></h2>
 							<div class='carousel-category-example'>
 					    	<% 5.times do |t| %>
-							  	<%= image_tag("#{category.title}/#{t+1}.jpg", class: 'img-product') %>
+							  	<%= image_tag("#{category.title.downcase}/#{t+1}.jpg", class: 'img-product') %>
 				  	  	<% end %>
 						  </div>
 							<div class="ver-mas">
