@@ -1,6 +1,5 @@
 var ready;
 ready = function() {
-  $('body').attr('style', 'margin-bottom:' + ($('footer').height()) + 'px');
   $(document).on("page:fetch", function() {
     $('.loading').show();
   });
