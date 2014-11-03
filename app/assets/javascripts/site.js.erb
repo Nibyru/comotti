@@ -1,6 +1,6 @@
 var ready;
 ready = function() {
-  $('body').attr('style', 'margin-bottom:' + ($('footer').height()-20) + 'px !important');
+  $('body').attr('style', 'margin-bottom:' + ($('footer').height()) + 'px !important');
   $(document).on("page:fetch", function() {
     $('.loading').show();
   });
@@ -127,7 +127,7 @@ ready = function() {
       itemSelector: '.product'
   });
   $grid.on('done.shuffle', function() {
-    console.log('Finished initializing shuffle!');
+    $('html').height($('body').height());
   });
   $('.fitros-productos a').click(function (e) {
       e.preventDefault();
