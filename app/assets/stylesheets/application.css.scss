@@ -988,12 +988,15 @@ footer{
 		#slides{
 			height: auto!important;
 			margin: auto;
-			width: 420px!important;
+			width: 100%!important;
+			max-width: 420px!important;
 			.slidesjs-control, .slidesjs-container{
 				height: 420px!important;
-				width: 420px!important;
+				width: 100%!important;
+				max-width: 420px!important;
 				img{
-					width: 420px!important;
+					width: 100%!important;
+					max-width: 420px!important;
 					height: auto!important;
 				}
 			}
