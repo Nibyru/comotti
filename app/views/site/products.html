@@ -8,50 +8,71 @@
     <div class="row">
 
       <div class="col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1 fitros-productos">
-        <div class="col-lg-3 col-md-3">
+        <div class="col-lg-4 col-md-4">
           <a data-group='all' class='active'><div class="filtro">Todos</div></a>
         </div>
         <% @categories.each do |category| %>
-          <div class="col-lg-3 col-md-3">
+          <div class="col-lg-4 col-md-4">
             <a data-group='<%= category.title %>'><div class="filtro"><%= category.title %></div></a>
           </div>
         <% end %>
       </div>
 
       <ul class="col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1 lista-productos">
+
         <% @products.each do |product| %>
 
-          <li class="col-lg-3 col-md-3 col-sm-4 col-xs-6 product" data-groups="'all', '<%= product.category.title %>'">
-
+          <li class="col-lg-3 col-md-3 col-sm-4 col-xs-6 product">
             <div class="img-producto">
               <%= image_tag(product.photo.url, size: '100') if product.photo %>
+            </div>  
+            <div class="titulo-producto">
+              <p><%= product.title %></p>
             </div>
-
-            <div class="col-lg-12 col-md-12 detalles">
-              <h3><%= product.title %></h3>
-              <p><%= product.description %></p>
-              <hr>
-              <div class="datos">
-                <span class="glyphicon glyphicon-time"></span>
-                <h4><%= product.time %></h4>
-              </div>
-              <div class="datos">
-                <span class="glyphicon glyphicon-cutlery"></span>
-                <h4><%= product.size %></h4>
-              </div>
-            </div>
-
-            <div class="col-lg-12 col-md-12 precio">
-              <p>Precio</p>
-              <span><i>$</i><%= product.price %></span>
-            </div>
-
           </li>
-
+          
         <% end %>
+
       </ul>
 
     </div>
   </div>
 
 </div>
+
+<!--
+
+<ul class="col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1 lista-productos">
+  <% @products.each do |product| %>
+
+    <li class="col-lg-3 col-md-3 col-sm-4 col-xs-6 product" data-groups="'all', '<%= product.category.title %>'">
+
+      <div class="img-producto">
+        <%= image_tag(product.photo.url, size: '100') if product.photo %>
+      </div>
+
+      <div class="col-lg-12 col-md-12 detalles">
+        <h3><%= product.title %></h3>
+        <p><%= product.description %></p>
+        <hr>
+        <div class="datos">
+          <span class="glyphicon glyphicon-time"></span>
+          <h4><%= product.time %></h4>
+        </div>
+        <div class="datos">
+          <span class="glyphicon glyphicon-cutlery"></span>
+          <h4><%= product.size %></h4>
+        </div>
+      </div>
+
+      <div class="col-lg-12 col-md-12 precio">
+        <p>Precio</p>
+        <span><i>$</i><%= product.price %></span>
+      </div>
+
+    </li>
+
+  <% end %>
+</ul>
+
+-->
