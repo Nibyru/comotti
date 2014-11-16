@@ -485,6 +485,111 @@ nav{
 
 		}
 	}
+	.descripcion-producto{
+		padding: 0;
+		margin-top: 40px;
+		.descripcion-izquierda{
+			padding-left:0;
+			padding-right: 30px;
+			img{
+				width: 100%;
+				height: auto;
+			}
+			.detalles{
+				margin-top: 20px;
+				height: 100%;
+				border-top:1px solid #E0E0E0;
+				border-bottom:1px solid #E0E0E0;
+				padding:0;
+				.precio{
+					text-align: left;
+					font-family: $font1;
+					padding-right:0;
+					span{
+						font-size: 6rem;
+						color: #A41712;
+						font-weight: bold;
+						i{color:#CCC; font-weight:100; font-style:normal;}
+					}
+				}
+				.datos{
+					border-left: 1px solid #E0E0E0;
+					margin-top: 7px;
+					margin-left: 20px;
+					padding-left: 30px;
+					padding-right:0;
+					.info{
+						margin: 10px 0;
+						span,h4{display:inline-block; vertical-align:bottom;}
+						span{
+							color:#4C4741;
+							font-size: 2rem;
+						}
+						h4{
+							font-size: 1.5rem;
+							margin:0;
+							text-transform:uppercase;
+							padding-left:5px;
+							font-family: $font1;
+						}
+					}
+				}
+			}
+		}
+		.descripcion-derecha{
+			border-left:1px solid #E0E0E0;
+			padding-left:30px;
+			padding-right: 0px;
+			.descripcion-titulo{
+				height: 40px;
+				width: 100%;
+				background: url("btn_filtro.png") no-repeat;
+				background-size: 100%;
+				background-position: bottom;
+				text-align: center;
+				p{
+					font-family: $font1;
+					color: #fff;
+					text-transform: uppercase;
+					font-size: 2.5rem;
+					line-height: 40px;
+				}
+			}
+			.descripcion-texto{
+				font-family: $font1;
+				font-size: 1.3rem;
+				text-align: justify;
+				padding: 0 15px;
+				margin-top: 15px;
+			}
+			.variedades{
+				background:#f1f1f1;
+				font-family: $font3;
+				padding:15px;
+				margin-top: 20px;
+				h3{
+					font-size: 1.8rem;
+					font-weight:bold;
+					margin: 0;
+				}
+				ul{
+					margin:0;
+					padding-left:0;
+					padding-top:10px;
+					li{
+						width: 100%;
+						font-size: 1.4rem;
+						text-transform: uppercase;
+						font-style: italic;
+						color:#666;
+						border-bottom:1px solid #D0D0D0;
+						padding: 4px 0;
+					}
+					li:last-child{border:none; padding:0;}
+				}
+			}
+		}
+	}
 }
 
 /* - - - FIN DE PRODUCTOS - - - */
