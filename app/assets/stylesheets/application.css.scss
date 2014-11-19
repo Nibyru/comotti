@@ -1,6 +1,42 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?ry2ivy');
+	src:url('fonts/icomoon.eot?#iefixry2ivy') format('embedded-opentype'),
+		url('fonts/icomoon.woff?ry2ivy') format('woff'),
+		url('fonts/icomoon.ttf?ry2ivy') format('truetype'),
+		url('fonts/icomoon.svg?ry2ivy#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-modo_coccion:before {
+	content: "\e600";
+}
+.icon-tiempo_coccion:before {
+	content: "\e601";
+}
+.icon-porciones:before {
+	content: "\e602";
+}
+
+
 $font1: 'Lato', sans-serif;
 $font2: 'Amatic SC', cursive;
 $font3: 'Roboto Slab', serif;
@@ -362,15 +398,16 @@ nav{
 		border-bottom:1px dotted #B9B9B9;
 		text-align:center;
 		.filtro{
-			height:33px;
+			width: 100%;
+			height:auto;
 			background:url('btn_filtro.png') no-repeat;
 			background-position:top;
 			color: #AE110B;
 			font-family: $font1;
-			font-size: 1.4rem;
+			font-size: 1.65rem;
 			text-transform: uppercase;
 			font-weight: 300;
-			line-height: 34px;
+			line-height: 43px;
 		}
 		.filtro:hover, .active .filtro{
 			background-position:bottom;
@@ -398,11 +435,12 @@ nav{
 				margin: auto;
 				position: relative;
 				top: -25px;
-				height: 30px;
-				width: 166px;
-				background: url("ver_todo.png") no-repeat;
+				height: auto;
+				width: 100%;
+				background: url("btn_ver_todo_productos.png") no-repeat;
 				background-position: top;
 				background-size: 100%%;
+				line-height: 50px;
 				z-index: 10;
 				text-align: center;
 				p{
@@ -410,149 +448,148 @@ nav{
 					font-weight: bold;
 					text-transform: uppercase;
 					color: #fff;
-					line-height: 30px;
-					font-size: 1.2rem;
+					font-size: 1.5rem;
 				}
 			}
-			/*.img-producto{
-				height: 130px;
-				width: 100%;
-				overflow: hidden;
-				img{
-					width: 100%;
-					min-height: 100%;
-					height: auto;
-				}
-			}
-			.detalles{
-				background: #F9F9F9;
-				height: 170px;
-				h3{
-					font-family: $font3;
-					color: #A41712;
-					text-transform: uppercase;
-					font-size: 1.6rem;
-					margin: 0;
-					padding-top: 15px;
-					height: 60px;
-				}
-				p{
-					font-size: 1.2rem;
-					color: #666;
-					font-family: $font1;
-					height: 35px;
-					margin: 0;
-				}
-				hr{
-					border-top: 1px solid #E0E0E0;
-					margin: 10px 0;
-				}
-				.datos{
-					padding-bottom:5px;
-					span,h4{display:inline-block; }
-					span{
-						color:#4C4741;
-						font-size: 1.4rem;
-					}
-					h4{
-						font-size: 1.2rem;
-						margin:0;
-						text-transform:uppercase;
-						padding-left:3px;
-						font-family: $font1;
-					}
-				}
-			}
-			.precio{
-				background:#F1F1F1;
-				text-align: right;
-				font-family: $font1;
-				padding-top: 8px;
-				p{
-					font-size: 0.9rem;
-					color: #666;
-					text-transform: uppercase;
-					margin: 0;
-				}
-				span{
-					font-family: $font1;
-					font-size: 3rem;
-					color: #A41712;
-					font-weight: bold;
-					i{color:#CCC; font-weight:100; font-style:normal;}
-				}
-			}*/
-
 		}
 	}
 	.descripcion-producto{
 		padding: 0;
 		margin-top: 40px;
+		display: none;
 		.descripcion-izquierda{
 			padding-left:0;
 			padding-right: 30px;
+			border-right:1px dotted #E0E0E0;
 			img{
 				width: 100%;
 				height: auto;
 			}
-			.detalles{
+			.detalles-pastas{
 				margin-top: 20px;
-				height: 100%;
-				border-top:1px solid #E0E0E0;
-				border-bottom:1px solid #E0E0E0;
-				padding:0;
+				height: 100px;
+				border-top: 1px dotted #E0E0E0;
+				border-bottom: 1px dotted #E0E0E0;
 				.precio{
-					text-align: left;
+					text-align: right;
 					font-family: $font1;
 					padding-right:0;
 					span{
-						font-size: 6rem;
-						color: #A41712;
+						font-size: 7rem;
+						color: #C70E34;
 						font-weight: bold;
 						i{color:#CCC; font-weight:100; font-style:normal;}
 					}
 				}
 				.datos{
-					border-left: 1px solid #E0E0E0;
-					margin-top: 7px;
-					margin-left: 20px;
-					padding-left: 30px;
-					padding-right:0;
+					height: 80px;
+					margin-top: 10px;
+					margin-bottom: 10px;
+					border-right: 1px dotted #E0E0E0;
+					padding-left: 0;
 					.info{
 						margin: 10px 0;
 						span,h4{display:inline-block; vertical-align:bottom;}
 						span{
-							color:#4C4741;
-							font-size: 2rem;
+							color:#666;
+							font-size: 2.7rem;
+							width: 27px;
+							text-align: center;
 						}
 						h4{
-							font-size: 1.5rem;
+							font-size: 1.6rem;
+							line-height: 27px;
 							margin:0;
 							text-transform:uppercase;
-							padding-left:5px;
 							font-family: $font1;
 						}
 					}
 				}
 			}
+			.detalles-postres{
+				display: none;
+				margin-bottom: -1px;
+				height: 60px;
+				border-top: 1px dotted #E0E0E0;
+				border-bottom: 1px dotted #E0E0E0;
+				.precio{
+					text-align: left;
+					font-family: $font1;
+					padding-right:0;
+					span{
+						font-size: 4rem;
+						color: #C70E34;
+						font-weight: bold;
+						i{color:#CCC; font-weight:100; font-style:normal;}
+					}
+				}
+				.datos{
+					height: 40px;
+					margin-top: 10px;
+					margin-bottom: 10px;
+					border-right: 1px dotted #E0E0E0;
+					.info{
+						line-height: 35px;
+						span,h4{display:inline-block; vertical-align:bottom;}
+						span{
+							color:#666;
+							font-size: 2.7rem;
+							width: 27px;
+							text-align: center;
+						}
+						h4{
+							font-size: 1.6rem;
+							line-height: 27px;
+							margin:0;
+							text-transform:uppercase;
+							font-family: $font1;
+						}
+					}
+				}
+			}
+			.coccion{
+				margin-top: 20px;
+				padding-bottom:10px;
+				border-bottom:1px dotted #E0E0E0;
+				span,h4{display:inline-block; vertical-align:bottom;}
+				span{
+					color:#666;
+					font-size: 2.7rem;
+					width: 27px;
+					text-align: center;
+				}
+				h4{
+					font-size: 1.6rem;
+					vertical-align: bottom;
+					margin: 0;
+					text-transform: uppercase;
+					font-family: "Lato", sans-serif;
+					padding-left: 5px;
+				}
+				p{
+					font-family: $font1;
+					font-size: 1.3rem;
+					text-align: justify;
+					margin-top: 15px;
+				}
+			}
 		}
 		.descripcion-derecha{
-			border-left:1px solid #E0E0E0;
 			padding-left:30px;
 			padding-right: 0px;
 			.descripcion-titulo{
-				height: 40px;
 				width: 100%;
-				background: url("btn_filtro.png") no-repeat;
+				height: auto;
+				background: url("descripcion_titulo.png") no-repeat;
 				background-size: 100%;
-				background-position: bottom;
+				background-position: top;
 				text-align: center;
 				p{
 					font-family: $font1;
 					color: #fff;
 					text-transform: uppercase;
 					font-size: 2.5rem;
-					line-height: 40px;
+					line-height: 43px;
 				}
 			}
 			.descripcion-texto{
@@ -580,12 +617,29 @@ nav{
 						width: 100%;
 						font-size: 1.4rem;
 						text-transform: uppercase;
+						font-weight: 300;
 						font-style: italic;
 						color:#666;
-						border-bottom:1px solid #D0D0D0;
+						border-bottom:1px dotted #D0D0D0;
 						padding: 4px 0;
 					}
-					li:last-child{border:none; padding:0;}
+					li:last-child{border:none; padding-bottom:0;}
+				}
+			}
+			.volver{
+				text-align: right;
+				margin-top: 20px;
+				a{
+					color: #888;
+					text-transform: uppercase;
+					font-family: $font1;
+					p,b{display:inline-block;}
+					b{font-size:2.7rem;}
+					p{
+						font-size:1.2rem;
+						vertical-align: middle;
+						padding-left:3px;
+					}
 				}
 			}
 		}

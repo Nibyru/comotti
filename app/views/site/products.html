@@ -9,8 +9,15 @@
 
       <div class="col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1 fitros-productos">
         <div class="col-lg-4 col-md-4">
-          <a data-group='all' class='active'><div class="filtro">Todos</div></a>
+          <a data-group='all' class='active'><div class="filtro">Pastas</div></a>
         </div>
+        <div class="col-lg-4 col-md-4">
+          <a data-group='all' class=''><div class="filtro">Pizzas y tartas</div></a>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <a data-group='all' class=''><div class="filtro">Postres</div></a>
+        </div>
+
         <% @categories.each do |category| %>
           <div class="col-lg-4 col-md-4">
             <a data-group='<%= category.title %>'><div class="filtro"><%= category.title %></div></a>
@@ -18,13 +25,15 @@
         <% end %>
       </div>
 
+
+      <!--  PELOTITAS -->
       <ul class="col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1 lista-productos">
         <% @products.each do |product| %>
 
           <li class="col-lg-3 col-md-3 col-sm-4 col-xs-6 product" data-groups="'all', '<%= product.category.title %>'">
             <div class="img-producto">
               <%= image_tag(product.photo.url, size: '100') if product.photo %>
-            </div>  
+            </div>
             <div class="titulo-producto">
               <p><%= product.title %></p>
             </div>
@@ -34,93 +43,77 @@
       </ul>
 
 
-
-      <!--  DESCRIPCION  DEL  PRODUCTO
+      <!--  DESCRIPCION  DEL  PRODUCTO  -->
       <div class="col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1 descripcion-producto">
-        <div class="col-lg-6 col-md-6 descripcion-izquierda">
+        <% @products.each do |product| %>
 
-          <%= image_tag(product.photo.url, size: '100') if product.photo %>
-
-          <div class="col-lg-12 col-md-12 detalles">
-            <div class="col-lg-4 col-md-4 precio">
-              <span><i>$</i><%= product.price %></span>
+          <div class="col-lg-7 col-md-7 descripcion-izquierda">
+            <%= image_tag(product.photo.url, size: '100') if product.photo %>
+            <!-- PARA PASTAS Y PIZZAS -->
+            <div class="col-lg-12 col-md-12 detalles-pastas">
+              <div class="col-lg-8 col-md-8 datos">
+                <div class="info">
+                  <span class="icon-tiempo_coccion"></span>
+                  <h4><%= product.time %></h4>
+                </div>
+                <div class="info">
+                  <span class="icon-porciones"></span>
+                  <h4><%= product.size %></h4>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 precio">
+                <span><i>$</i><%= product.price %></span>
+              </div>
+            </div>
+            <!-- PARA POSTRES -->
+            <div class="col-lg-12 col-md-12" style="padding:0;margin-top:20px;">
+              <div class="detalles-postres">
+                <div class="col-lg-8 col-md-8 datos">
+                  <div class="info">
+                    <span class="icon-porciones"></span>
+                    <h4><%= product.size %></h4>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-4 precio">
+                  <span><i>$</i><%= product.price %></span>
+                </div>
+              </div>
             </div>
 
-            <div class="col-lg-7 col-md-7 datos">
-              <div class="info">
-                <span class="glyphicon glyphicon-time"></span>
-                <h4><%= product.time %></h4>
-              </div>
-
-              <div class="info">
-                <span class="glyphicon glyphicon-cutlery"></span>
-                <h4><%= product.size %></h4>
-              </div>
+            <div class="col-lg-12 col-md-12 coccion">
+              <span class="icon-modo_coccion"></span>
+              <h4>Método de cocción</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vehicula nulla sagittis, euismod quam ac, tincidunt enim. Ut ornare tristique diam. Suspendisse dignissim, mauris eget feugiat varius, nisi libero facilisis justo, in maximus sem justo non libero. Curabitur interdum efficitur erat ac molestie.</p>
             </div>
           </div>
 
-        </div>
-        <div class="col-lg-6 col-md-6 descripcion-derecha">
-          <div class="descripcion-titulo">
-            <p><%= product.title %>/p>
+          <div class="col-lg-5 col-md-5 descripcion-derecha">
+            <div class="descripcion-titulo">
+              <h3><%= product.title %></h3>
+            </div>
+            <div class="descripcion-texto">
+              <p><%= product.description %></p>
+            </div>
+            <div class="variedades">
+              <h3>Variedades</h3>
+              <ul>
+                <li>Variedad 1</li>
+                <li>Variedad 2</li>
+                <li>Variedad 3</li>
+                <li>Variedad 4</li>
+                <li>Variedad 5</li>
+                <li>Variedad 6</li>
+              </ul>
+            </div>
+            <div class="volver">
+              <a><b><</b><p>Volver a pastas</p></a>
+            </div>
           </div>
-          <div class="descripcion-texto">
-            <p><%= product.description %></p>
-          </div>
-          <div class="variedades">
-            <h3>Variedades</h3>
-            <ul>
-              <li>Variedad 1</li>
-              <li>Variedad 2</li>
-              <li>Variedad 3</li>
-              <li>Variedad 4</li>
-              <li>Variedad 5</li>
-              <li>Variedad 6</li>
-            </ul>
-        </div>
-        </div>
+
+        <% end %>
       </div>
-      -->
-
-
+             <!--  DESCRIPCION  DEL  PRODUCTO  --> 
     </div>
   </div>
 
 </div>
-
-<!--
-
-<ul class="col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1 lista-productos">
-  <% @products.each do |product| %>
-
-    <li class="col-lg-3 col-md-3 col-sm-4 col-xs-6 product" data-groups="'all', '<%= product.category.title %>'">
-
-      <div class="img-producto">
-        <%= image_tag(product.photo.url, size: '100') if product.photo %>
-      </div>
-
-      <div class="col-lg-12 col-md-12 detalles">
-        <h3><%= product.title %></h3>
-        <p><%= product.description %></p>
-        <hr>
-        <div class="datos">
-          <span class="glyphicon glyphicon-time"></span>
-          <h4><%= product.time %></h4>
-        </div>
-        <div class="datos">
-          <span class="glyphicon glyphicon-cutlery"></span>
-          <h4><%= product.size %></h4>
-        </div>
-      </div>
-
-      <div class="col-lg-12 col-md-12 precio">
-        <p>Precio</p>
-        <span><i>$</i><%= product.price %></span>
-      </div>
-
-    </li>
-
-  <% end %>
-</ul>
-
--->
