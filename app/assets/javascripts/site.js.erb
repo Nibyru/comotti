@@ -152,7 +152,12 @@ ready = function() {
     }
   }
 
-  var categoryParams = getUrlParameter('category');
+  var category = getUrlParameter('category');
+  if (category){
+    var categoryParams = category;
+  }else{
+    var categoryParams = 'Pastas';
+  }
   if (categoryParams){
     var groupName = categoryParams.replace(/\+/g, ' ');
     $('.fitros-productos a').removeClass('active');

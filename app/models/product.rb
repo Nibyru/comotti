@@ -3,5 +3,5 @@ class Product < ActiveRecord::Base
   has_many :variety
   has_many :portions
   mount_uploader :photo, PhotoUploader
-  validates :title, :category, :photo, presence: true
+  validates :title, :category, :photo, :variety, :portions, presence: true
 end

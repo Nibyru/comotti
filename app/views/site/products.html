@@ -18,7 +18,7 @@
       <!--  PELOTITAS -->
       <ul class="col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1 lista-productos">
         <% @products.each do |product| %>
-          <li class="col-lg-3 col-md-3 col-sm-4 col-xs-6 product" data-groups="'all', '<%= product.category.title %>'">
+          <li class="col-lg-3 col-md-3 col-sm-4 col-xs-6 product" data-groups="<%= product.category.title %>'">
             <a id='show-product' data-id=<%= product.id %>>
               <div class="img-producto">
                 <%= image_tag(product.photo.url, size: '100') if product.photo %>
