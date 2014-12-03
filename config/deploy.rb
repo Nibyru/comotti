@@ -3,7 +3,9 @@ set :deploy_user, 'root'
 
 # setup repo details
 set :scm, :git
-set :repo_url, 'git@github.com:Nibyru/comotti.git'
+set :repo_url, 'https://github.com/Nibyru/comotti.git'
+set :git_https_username, 'sarriagada'
+set :git_https_password, 'meisner1051'
 
 # setup rbenv.
 #set :rbenv_type, :system
