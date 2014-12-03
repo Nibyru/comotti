@@ -12,6 +12,7 @@ Comotti::Application.routes.draw do
   get 'productos' => 'site#products', as: :products
   get 'promociones' => 'site#promos', as: :promos
   get 'contacto' => 'site#contact', as: :contact
+  get 'product/:id' => 'site#show_product'
   resource :messages, only: [:create]
 
   root 'site#index'

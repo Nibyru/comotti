@@ -13,6 +13,11 @@ class SiteController < ApplicationController
     @categories = Category.all
   end
 
+  def show_product
+    product = Product.find(params[:id])
+    render partial: 'shared/show_product', locals: { product: product }
+  end
+
   def promos
     @promos = Promo.all
   end

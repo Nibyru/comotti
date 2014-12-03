@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141018200616) do
+ActiveRecord::Schema.define(version: 20141203004042) do
 
   create_table "categories", force: true do |t|
     t.string   "title"
@@ -31,16 +31,23 @@ ActiveRecord::Schema.define(version: 20141018200616) do
     t.datetime "updated_at"
   end
 
+  create_table "portions", force: true do |t|
+    t.string   "size"
+    t.float    "price"
+    t.integer  "product_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "products", force: true do |t|
     t.string   "title"
-    t.float    "price"
     t.text     "description"
     t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "photo"
-    t.string   "size"
     t.string   "time"
+    t.text     "cook_method"
   end
 
   create_table "promos", force: true do |t|
@@ -84,5 +91,12 @@ ActiveRecord::Schema.define(version: 20141018200616) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+  create_table "varieties", force: true do |t|
+    t.string   "name"
+    t.integer  "product_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

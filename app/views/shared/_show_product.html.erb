@@ -1,0 +1,65 @@
+<div class="col-lg-7 col-md-7 descripcion-izquierda">
+  <%= image_tag(product.photo.url, size: '100') if product.photo %>
+  <% if product.category.title == 'Postres' %>
+    <!-- PARA POSTRES -->
+    <div class="col-lg-12 col-md-12" style="padding:0;margin-top:20px;">
+      <% product.portion.each do |portion|%>
+        <div class="detalles-postres">
+          <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 datos">
+            <div class="info">
+              <span class="icon-porciones"></span>
+              <h4><%= portion.size %></h4>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 precio">
+            <span><i>$</i><%= portion.price %></span>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% else %>
+    <!-- PARA PASTAS Y PIZZAS -->
+    <div class="col-lg-12 col-md-12 detalles-pastas">
+      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 datos">
+        <div class="info">
+          <span class="icon-tiempo_coccion"></span>
+          <h4><%= product.time %></h4>
+        </div>
+        <div class="info">
+          <span class="icon-porciones"></span>
+          <h4><%= product.portions.first.size %></h4>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 precio">
+        <span><i>$</i><%= product.portions.first.price %></span>
+      </div>
+    </div>
+    <% unless product.cook_method.blank? %>
+      <div class="col-lg-12 col-md-12 coccion">
+        <span class="icon-modo_coccion"></span>
+        <h4>Método de cocción</h4>
+        <p><%= product.cook_method %></p>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+<div class="col-lg-5 col-md-5 descripcion-derecha">
+  <div class="descripcion-titulo">
+    <h3><%= product.title %></h3>
+  </div>
+  <div class="descripcion-texto">
+    <p><%= product.description %></p>
+  </div>
+  <div class="variedades">
+    <h3>Variedades</h3>
+    <ul>
+      <% product.variety.each do |variety| %>
+        <li><%= variety.name %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="volver">
+    <a id='hide-product'><b><</b><p>Volver a pastas</p></a>
+  </div>
+</div>

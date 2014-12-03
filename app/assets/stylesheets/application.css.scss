@@ -54,6 +54,7 @@ html{
 
 body{
 	overflow: hidden;
+	margin-bottom: 464px;
 }
 
 .row{
@@ -840,6 +841,7 @@ footer{
 	position: absolute;
 	bottom: 0;
 	width: 100%;
+	z-index: 9999;
 }
 .footer1{
 	background:#212121;
@@ -1207,6 +1209,7 @@ footer{
 /* - - - MOBILE 480px - - - */
 
 @media only screen and (max-width: 480px) {
+body{ margin-bottom: 1030px; }
 	.loading {
 		width: 100%;
 		left: 0;
@@ -1240,6 +1243,7 @@ footer{
 
 
 	#promo .lista-promociones li .promocion h3 {margin-top: 20px;}
+
 
 	.footer1 .social{text-align:right;}
 	
