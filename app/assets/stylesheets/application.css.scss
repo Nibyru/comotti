@@ -1236,7 +1236,7 @@ body{ margin-bottom: 1030px; }
 	}
 	.slidesjs-previous,.slidesjs-next, .slidesjs-pagination{ display: none!important; }
 
-	#productos .descripcion-producto .descripcion-derecha .descripcion-titulo {
+	#productos .descripcion-producto .visible-xs .descripcion-derecha .descripcion-titulo {
 		height:40px;
 		h3{line-height:40px; font-size:2rem;}
 	}
@@ -1347,7 +1347,7 @@ body{ margin-bottom: 1030px; }
 			margin-left: 10%;
 			.img-producto { height: 200px;}
 		}
-		.descripcion-producto{
+		.descripcion-producto .visible-xs{
 			.descripcion-izquierda{
 				.detalles-pastas{
 					height: 200px;

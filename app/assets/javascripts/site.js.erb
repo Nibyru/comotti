@@ -172,12 +172,12 @@ ready = function() {
   }
   
   $('body').on('click', '#show-product', function(){
+    $( ".descripcion-producto" ).show();
     $('.fitros-productos, .lista-productos').hide();
     $('.loading').show();
     var url = "product/" + $(this).data('id');
     $.get( url, function( data ) {
       $('.loading').hide();
-      $( ".descripcion-producto" ).html( data );
     });
   });
   $('body').on('click', '#hide-product', function(){

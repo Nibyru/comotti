@@ -14,8 +14,10 @@ class SiteController < ApplicationController
   end
 
   def show_product
-    product = Product.find(params[:id])
-    render partial: 'shared/show_product', locals: { product: product }
+    @product = Product.find(params[:id])
+    respond_to do |format|
+        format.js
+    end
   end
 
   def promos
