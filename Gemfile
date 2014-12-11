@@ -12,6 +12,7 @@ gem 'carrierwave'
 gem 'devise'
 gem 'rails_admin'
 gem 'fog'
+gem 'protected_attributes'
 
 group :doc do
   gem 'sdoc', require: false

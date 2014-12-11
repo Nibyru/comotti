@@ -55,13 +55,13 @@
     <div class="variedades">
       <h3>Variedades</h3>
       <ul>
-        <% product.variety.each do |variety| %>
+        <% product.varieties.each do |variety| %>
           <li><%= variety.name %></li>
         <% end %>
       </ul>
     </div>
     <div class="volver">
-      <a id='hide-product'><b><</b><p>Volver a pastas</p></a>
+      <a id='hide-product'><b><</b><p>Volver</p></a>
     </div>
   </div>
 </div>
@@ -81,7 +81,7 @@
     <div class="variedades">
       <h3>Variedades</h3>
       <ul>
-        <% product.variety.each do |variety| %>
+        <% product.varieties.each do |variety| %>
           <li><%= variety.name %></li>
         <% end %>
       </ul>
@@ -113,7 +113,7 @@
   </div>
   <div class="descripcion-derecha">
     <div class="volver">
-      <a id='hide-product'><b><</b><p>Volver a pastas</p></a>
+      <a id='hide-product'><b><</b><p>Volver</p></a>
     </div>
   </div>
 </div>
