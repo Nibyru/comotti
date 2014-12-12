@@ -1,4 +1,6 @@
 class Product < ActiveRecord::Base
+  attr_accessible :title, :photo, :cook_method, :description, :category_id, :photo_cache, :time
+
   belongs_to :category
   has_and_belongs_to_many :varieties
   has_and_belongs_to_many :portions
