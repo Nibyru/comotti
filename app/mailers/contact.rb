@@ -1,10 +1,10 @@
 class Contact < ActionMailer::Base
-  default from: "dotestudiografico@gmail.com"
+  default from: "gustavocomotti@gmail.com"
 
   def admin_email(message)
     @message = message
     @url  = 'http://www.comottipastas.com'
-    mail(to: 'dotestudiografico@gmail.com', subject: 'Nuevo email de contacto')
+    mail(to: 'gustavocomotti@gmail.com', subject: 'Nuevo email de contacto')
   end
 
   def user_email(message)
