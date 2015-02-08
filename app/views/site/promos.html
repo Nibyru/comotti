@@ -1,33 +1,38 @@
 <div id="promo">
 
 	<div class="titulo">
-    	<h1>Promociones</h1>
+		<h1>Promociones</h1>
 	</div>
 
 	<div class="container">
 		<div class="row">
-
-			<ul class="col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1 col-xs-10 col-xs-offset-1 lista-promociones">
-				<% @promos.each do |promo| %>
-					<li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-						<div class="col-lg-12 col-md-12 promocion">
-							<div class="img-promo">
-							  <%= image_tag(promo.photo.url, size: '100') if promo.photo %>
-							</div>
-							<div class="col-lg-12 col-md-12">
-								<div class="promo-descripcion">
-									<h3><%= promo.title %></h3>
-									<h4><%= promo.description %></h4>
+			<% if @promos.any? %>
+				<ul class="col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1 col-xs-10 col-xs-offset-1 lista-promociones">
+					<% @promos.each do |promo| %>
+						<li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							<div class="col-lg-12 col-md-12 promocion">
+								<div class="img-promo">
+								  <%= image_tag(promo.photo.url, size: '100') if promo.photo %>
 								</div>
-								<div class="precio-promo">
-									<span><b>$</b><%= promo.price %></span>
+								<div class="col-lg-12 col-md-12">
+									<div class="promo-descripcion">
+										<h3><%= promo.title %></h3>
+										<h4><%= promo.description %></h4>
+									</div>
+									<div class="precio-promo">
+										<span><b>$</b><%= promo.price %></span>
+									</div>
+									<i>Promo válida del <%= promo.start_date.to_s %> al <%= promo.end_date.to_s %></i>
 								</div>
-								<i>Promo válida del <%= promo.start_date.to_s %> al <%= promo.end_date.to_s %></i>
 							</div>
-						</div>
-					</li>
-				<% end %>
-			</ul>
+						</li>
+					<% end %>
+				</ul>
+			<% else %>
+				<center>
+					<h2>Por el momento no hay promociones vigentes</h2>
+				</center>
+			<% end %>
 		</div>
 	</div>
 </div>
