@@ -42,7 +42,6 @@ ready = function() {
   }else{
     $('a.slidesjs-navigation').hide();
   }
-  $('#slider').attr('style', 'height:' + ($('#slides img').height()+20) + 'px !important');
   // map
   if ($('#map').length > 0){
     var map = L.mapbox.map('map', 'sarriagada.j4p9400k', {
@@ -184,6 +183,7 @@ ready = function() {
     $('.fitros-productos, .lista-productos').show();
     $( ".descripcion-producto" ).hide();
   });
+  $('#slider').attr('style', 'height:' + ($('#slides img').height()+20) + 'px !important');
 };
 
 
