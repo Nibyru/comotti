@@ -12,9 +12,11 @@
                 <h4><%= portion.size %></h4>
               </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 precio">
-              <span><i>$</i><%= portion.price %></span>
-            </div>
+            <% if portion.price != 0 %>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 precio">
+                <span><i>$</i><%= portion.price %></span>
+              </div>
+            <% end %>
           </div>
         <% end %>
       </div>

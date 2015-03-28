@@ -486,7 +486,6 @@ nav{
 					height: 80px;
 					margin-top: 10px;
 					margin-bottom: 10px;
-					border-right: 1px dotted #E0E0E0;
 					padding-left: 0;
 					.info{
 						margin: 10px 0;
@@ -517,6 +516,7 @@ nav{
 					text-align: center;
 					font-family: $font1;
 					padding-right:0;
+					border-left: 1px dotted #E0E0E0;
 					span{
 						font-size: 4rem;
 						color: #C70E34;
@@ -528,7 +528,6 @@ nav{
 					height: 40px;
 					margin-top: 10px;
 					margin-bottom: 10px;
-					border-right: 1px dotted #E0E0E0;
 					.info{
 						line-height: 35px;
 						span,h4{display:inline-block; vertical-align:bottom;}
