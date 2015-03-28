@@ -58,7 +58,11 @@
       <h3>Variedades</h3>
       <ul>
         <% product.varieties.each do |variety| %>
-          <li><%= variety.name %></li>
+          <% if product.category.title.downcase == 'postres' %>
+            <li><a href='<%= image_url("#{variety.name}.png")%>' data-featherlight="image"><%= variety.name %></a></li>
+          <% else %>
+            <li><%= variety.name %></li>
+          <% end %>
         <% end %>
       </ul>
     </div>
