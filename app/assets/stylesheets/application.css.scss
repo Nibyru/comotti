@@ -630,6 +630,13 @@ nav{
 						color:#666;
 						border-bottom:1px dotted #D0D0D0;
 						padding: 4px 0;
+						a{
+							color: #666;
+							&:hover{
+								color: #666;
+								font-weight: bold;
+							}
+						}
 					}
 					li:last-child{border:none; padding-bottom:0;}
 				}
