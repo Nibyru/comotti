@@ -422,7 +422,7 @@ nav{
 		li{
 			margin-top:30px;
 			.img-producto{
-				height: auto;
+				height: 207px;
 				width: 100%;
 				border-radius: 100%;
 				overflow: hidden;
@@ -1369,6 +1369,11 @@ body{ margin-bottom: 1030px; }
 			}
 		}
 	}
+	#productos{
+		.lista-productos li{
+			.img-producto { height: 200px;}
+		}
+	}
 
 	#promo .lista-promociones li{
 		width: 100%;
@@ -1407,7 +1412,7 @@ body{ margin-bottom: 1030px; }
 		.lista-productos li{
 			width: 80%;
 			margin-left: 10%;
-			.img-producto { height: auto;}
+			.img-producto { height: 200px;}
 		}
 		.descripcion-producto .visible-xs{
 			.descripcion-izquierda{
