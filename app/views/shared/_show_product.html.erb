@@ -87,8 +87,12 @@
     <div class="variedades">
       <h3>Variedades</h3>
       <ul>
-        <% product.varieties.each do |variety| %>
-          <li><%= variety.name %></li>
+        <% product.varieties.each_with_index do |variety, index| %>
+          <% if product.category.title.downcase == 'postres' %>
+            <li><a href='<%= image_url("variedad/#{product.title.downcase}#{index}.jpg")%>' data-featherlight="image"><%= variety.name %></a></li>
+          <% else %>
+            <li><%= variety.name %></li>
+          <% end %>
         <% end %>
       </ul>
     </div>
@@ -110,9 +114,11 @@
               <h4><%= portion.size %></h4>
             </div>
           </div>
-          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 precio">
-            <span><i>$</i><%= portion.price %></span>
-          </div>
+          <% if portion.price != 0 %>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 precio">
+              <span><i>$</i><%= portion.price %></span>
+            </div>
+          <% end %>
         </div>
       <% end %>
     </div>
