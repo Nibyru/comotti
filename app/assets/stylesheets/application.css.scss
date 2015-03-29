@@ -422,7 +422,7 @@ nav{
 		li{
 			margin-top:30px;
 			.img-producto{
-				height: 207px;
+				height: auto;
 				width: 100%;
 				border-radius: 100%;
 				overflow: hidden;
@@ -1346,7 +1346,29 @@ body{ margin-bottom: 1030px; }
 			}
 		}
 	}
-	  
+	#productos .descripcion-producto .visible-xs{
+		.descripcion-derecha .descripcion-titulo {
+			height:40px;
+			h3{line-height:40px; font-size:2rem;}
+		}
+		.detalles-postres{
+			.datos{
+				padding-left: 0;
+				.info{
+					h4{
+						font-size: 1.5rem;
+						vertical-align: middle;
+					}
+					span{
+						font-size: 2rem;
+					}
+				}
+			 	.precio span{
+					font-size: 2rem;
+				}
+			}
+		}
+	}
 
 	#promo .lista-promociones li{
 		width: 100%;
@@ -1385,7 +1407,7 @@ body{ margin-bottom: 1030px; }
 		.lista-productos li{
 			width: 80%;
 			margin-left: 10%;
-			.img-producto { height: 200px;}
+			.img-producto { height: auto;}
 		}
 		.descripcion-producto .visible-xs{
 			.descripcion-izquierda{
