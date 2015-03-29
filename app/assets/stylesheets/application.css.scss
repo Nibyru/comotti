@@ -1346,7 +1346,7 @@ body{ margin-bottom: 1030px; }
 			}
 		}
 	}
-	#productos .descripcion-producto .visible-xs{
+	#productos{
 		.descripcion-derecha .descripcion-titulo {
 			height:40px;
 			h3{line-height:40px; font-size:2rem;}
@@ -1368,8 +1368,6 @@ body{ margin-bottom: 1030px; }
 				}
 			}
 		}
-	}
-	#productos{
 		.lista-productos li{
 			.img-producto { height: 150px;}
 		}
