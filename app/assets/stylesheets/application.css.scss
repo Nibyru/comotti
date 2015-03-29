@@ -1257,7 +1257,7 @@ body{ margin-bottom: 1030px; }
 	}
 	.slidesjs-previous,.slidesjs-next, .slidesjs-pagination{ display: none!important; }
 
-	#productos .descripcion-producto .visible-xs{
+	#productos{
 		.descripcion-derecha .descripcion-titulo {
 			height:40px;
 			h3{line-height:40px; font-size:2rem;}
@@ -1427,6 +1427,29 @@ body{ margin-bottom: 1030px; }
 						width: 100%;
 						border-top: 1px dotted #E0E0E0;
 					}
+				}
+			}
+		}
+	}
+	#productos{
+		.descripcion-derecha .descripcion-titulo {
+			height:40px;
+			h3{line-height:40px; font-size:2rem;}
+		}
+		.detalles-postres{
+			.datos{
+				padding-left: 0;
+				.info{
+					h4{
+						font-size: 1.5rem;
+						vertical-align: middle;
+					}
+					span{
+						font-size: 2rem;
+					}
+				}
+			 	.precio span{
+					font-size: 2rem;
 				}
 			}
 		}
